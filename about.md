@@ -2,6 +2,7 @@
 layout: page
 title: About
 permalink: /about/
+menu: main
 ---
 
 Kanpur FOSS is a community of Open Source enthusiasts, who love to learn and share. We organize meetups about various open-source technologies, such as Arduino, Docker, Python, WordPress, and more, all across Kanpur for free.

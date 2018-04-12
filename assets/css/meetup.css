@@ -2,6 +2,48 @@
 	text-align: center;
 }
 
+.loader {
+	color: #fff;
+	font-family: Consolas, Menlo, Monaco, monospace;
+	font-weight: bold;
+	text-align: center;
+	opacity: 0.8;
+}
+
+.loader span {
+	font-size: 80px;
+	color: black;
+	display: inline-block;
+}
+
+.loader .bracket {
+	font-size: 100px;
+	-webkit-animation: pulse 0.4s alternate infinite ease-in-out;
+	animation: pulse 0.4s alternate infinite ease-in-out;
+}
+
+.loader .bracket:nth-child(n+2) {
+	font-size: 100px;
+	-webkit-animation: pulse 0.4s 0.4s alternate infinite ease-in-out;
+	animation: pulse 0.4s 0.4s alternate infinite ease-in-out;
+}
+
+@-webkit-keyframes pulse {
+	to {
+		-webkit-transform: scale(0.8);
+		transform: scale(0.8);
+		opacity: 0.5;
+	}
+}
+
+@keyframes pulse {
+	to {
+		-webkit-transform: scale(0.8);
+		transform: scale(0.8);
+		opacity: 0.5;
+	}
+}
+
 .container * {
 	box-sizing: border-box;
 }
@@ -86,51 +128,6 @@
 	top: 10px;
 }
 	
-.card-media-object-social-list {
-	bottom: 4px;
-	left: 10px;
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	position: absolute;
-	z-index: 20;
-}
-	
-.card-media-object-social-list li {
-	border-radius: 50%;
-	display: inline-block;
-	height: 30px;
-	margin-right: 6px;
-	opacity: 0;
-	overflow: hidden;
-	transform: translateY(5px);
-	transition: all 300ms ease-out;
-	width: 30px;
-}
-	
-.card-media:hover .card-media-object-social-list li {
-	opacity: 1;
-	transform: translateY(0);
-}
-	
-.card-media-object-social-list li:nth-child(1) {
-	transition-delay: 0;
-}
-.card-media-object-social-list li:nth-child(2) {
-	transition-delay: 75ms;
-}
-.card-media-object-social-list li:nth-child(3) {
-	transition-delay: 150ms;
-}
-	
-.card-media-object-social-list-item-additional {
-	border: 1px solid #fff;
-	color: #fff;
-	font-size: 12px;
-	padding-top: 7px;
-	text-align: center;
-}
-	
 .card-media-body {
 	background-color: #fff;
 	float: left;
@@ -154,6 +151,10 @@
 .card-media:hover .card-media-body-top-icons {
 	opacity: 1;
 	transform: translateY(0);
+}
+
+.card-media-body-top-icons a {
+	text-decoration: none;
 }
 	
 .card-media-body-top-icons svg {
@@ -214,6 +215,18 @@
 }
 
 @media screen and (max-width: 768px) {
+	.site-nav {
+		z-index: 1;
+	}
+	.loader span {
+		font-size: 25px;
+	}
+	.loader .bracket {
+		font-size: 30px;
+	}	
+	.loader .bracket:nth-child(n+2) {
+		font-size: 30px;
+	}
 	.card-media {
 		height: 150px;
 	}
