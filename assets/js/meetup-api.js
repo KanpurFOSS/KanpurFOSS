@@ -11,12 +11,17 @@ function formatDate( date ) {
 		'Sunday', 'Monday', 'Tuesday', 'Wednesday',
 		'Thursday' ,'Friday', 'Saturday',
 	];
+	const hours = date.getHours() > 12 ? date.getHours() - 12 : date.getHours();
+	const minutes = date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes();
+	const am_pm = date.getHours() >= 12 ? 'PM' : 'AM';
+	const time = hours + ':' + minutes + ' ' + am_pm;
 	const dayofWeek = date.getDay();
 	const day = date.getDate();
 	const monthIndex = date.getMonth();
 	const year = date.getFullYear();
-	return date.toLocaleTimeString() + ', ' + weekNames[dayofWeek] + ', ' + day + ', ' + monthNames[monthIndex];
+	return time + ', ' + weekNames[dayofWeek] + ', ' + day + ', ' + monthNames[monthIndex];
 }
+
 
 $.ajax({
 	url: 'https://api.meetup.com/2/events?offset=0&format=json&limited_events=False&group_id=15832012%2C15813572%2C15719982%2C23027469%2C25604122%2C26350537&photo-host=public&page=20&fields=&order=time&desc=false&status=upcoming&sig_id=132403932&sig=dc12a501ae4c704c31417770c63ad3d09f48bbde',
