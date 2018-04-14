@@ -1,4 +1,5 @@
-### List of people who have contributed to this repository
+# Contributors
 
 * Hardeep Asrani [@HardeepAsrani](https://github.com/HardeepAsrani)
 * Tushar Mittal [@techytushar](https://github.com/techytushar)
+* Hitanshu Sahu [@Phantom-Cluster](https://github.com/Phantom-Cluster)
