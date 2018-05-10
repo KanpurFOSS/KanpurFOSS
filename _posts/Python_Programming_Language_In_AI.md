@@ -1,3 +1,11 @@
+---
+title: Python Programming Language in AI
+layout: post
+date: '2018-05-11 12:28:00'
+categories: python pydata
+author: Himanshu Awasthi
+---
+
 # Python Programming Language in AI
 
 We all are in the era of [Artificial Intelligence](https://en.wikipedia.org/wiki/Artificial_intelligence). Tech giants like Google , Microsoft & Facebook investing in AI. **Amazon's Alexa** also shows the how tight compition going in to market of AI, not only Google & Apple but other companies also dominate the tech market if they have power of AI. There is huge opportunity in 2018 for people who looking for jobs in Machine Learning , Deep Learning & AI . Some times it seem like Machine Learning & AI both are same thing but actully their is a basic difference b/w them & In short, the best explanation defines this in better way is that:
