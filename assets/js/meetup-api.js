@@ -33,7 +33,7 @@ function addToCalendar( event ) {
 }
 
 $.ajax({
-	url: 'https://api.meetup.com/2/events?offset=0&format=json&limited_events=False&group_id=15832012%2C15813572%2C15719982%2C23027469%2C25604122%2C26350537&photo-host=public&page=20&fields=&order=time&desc=false&status=upcoming&sig_id=132403932&sig=dc12a501ae4c704c31417770c63ad3d09f48bbde',
+	url: 'https://api.meetup.com/2/events?offset=0&format=json&limited_events=False&group_id=28676809%2C15832012%2C15813572%2C15719982%2C23027469%2C25604122%2C26350537&photo-host=public&page=20&fields=&order=time&desc=false&status=upcoming&sig_id=132403932&sig=5653b4d042a5fca1e53a89953c785f6248c3c63d',
 	dataType: 'jsonp',
 	success: function(data) {
 		events.push(...data['results'])
@@ -50,6 +50,8 @@ $.ajax({
 				group = 'python';
 			} else if ( event.group.urlname === 'Arduino-IoT-Kanpur' ) {
 				group = 'arduino';
+			} else if ( event.group.urlname === 'kanpur-js' ) {
+				group = 'javascript';
 			}
 			return `<div class="card-media">
 						<div class="card-media-object-container">

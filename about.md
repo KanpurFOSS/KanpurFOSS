@@ -1,7 +1,7 @@
 ---
-layout: page
 title: About
-permalink: /about/
+layout: page
+permalink: "/about/"
 menu: main
 ---
 
@@ -12,6 +12,7 @@ All the events are volunteer-driven, and non-profit. Want to be part of our comm
 * [Arduino and IoT Kanpur](https://www.meetup.com/Arduino-IoT-Kanpur/)
 * [Docker Kanpur](https://www.meetup.com/Docker-Kanpur/)
 * [HS4: Hackerspace](https://www.meetup.com/hackerspace-kanpur/)
+* [kanpur.js](https://www.meetup.com/kanpur-js/)
 * [Kanpur Python](https://www.meetup.com/KanpurPython/)
 * [PyData Kanpur](https://www.meetup.com/PyDataKanpur/)
 * [Kanpur WordPress Meetup](https://www.meetup.com/WordPress-Kanpur/)
