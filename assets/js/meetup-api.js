@@ -48,7 +48,7 @@ $.ajax({
 				group = 'pydata';
 			} else if ( event.group.urlname === 'KanpurPython' ) {
 				group = 'python';
-			} else if ( event.group.urlname === 'Arduino-IoT-Kanpur' ) {
+			} else if ( event.group.urlname === 'makerspacekanpur' ) {
 				group = 'arduino';
 			} else if ( event.group.urlname === 'kanpur-js' ) {
 				group = 'javascript';
