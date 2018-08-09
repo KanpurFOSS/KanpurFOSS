@@ -55,7 +55,7 @@ $.ajax({
 			}
 			return `<div class="card-media">
 						<div class="card-media-object-container">
-							<div class="card-media-object" style="background-image: url('/assets/images/${group}.png');"></div>
+							<div class="card-media-object" style="background-image: url('event.photo_url');"></div>
 							${ new Date().getDate() === new Date( event.time ).getDate() ? '<span class="card-media-object-tag subtle">Today</span>' : '' }
 						</div>
 						<div class="card-media-body">
