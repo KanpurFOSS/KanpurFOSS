@@ -48,8 +48,8 @@ $.ajax({
 				group = 'pydata';
 			} else if ( event.group.urlname === 'KanpurPython' ) {
 				group = 'python';
-			} else if ( event.group.urlname === 'Arduino-IoT-Kanpur' ) {
-				group = 'arduino';
+			} else if ( event.group.urlname === 'makerspacekanpur' ) {
+				group = 'makerspace';
 			}
 			return `<div class="card-media">
 						<div class="card-media-object-container">
