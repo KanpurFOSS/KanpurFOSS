@@ -49,7 +49,7 @@ $.ajax({
 			} else if ( event.group.urlname === 'KanpurPython' ) {
 				group = 'python';
 			} else if ( event.group.urlname === 'makerspacekanpur' ) {
-				group = 'arduino';
+				group = 'makerspace';
 			} else if ( event.group.urlname === 'kanpur-js' ) {
 				group = 'javascript';
 			}
