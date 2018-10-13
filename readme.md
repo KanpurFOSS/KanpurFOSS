@@ -58,26 +58,20 @@ GPL 3.0
 
 
   [Arduino]:<https://www.arduino.cc/>
-  [IoT]: <https://en.wikipedia.org/wiki/Internet_of_things>
-  [JavaScript]: <https://www.javascript.com/>
-  [Docker]: <https://www.docker.com/>
-  [Python]: <https://www.python.org/>
-  [WordPress]: <http://wordpress.org>
-  [HackerSpace]: <>
-   [slack]: <https://wpkanpur.herokuapp.com/>
-   [markdown-it]: <https://github.com/markdown-it/markdown-it>
-   [Ace Editor]: <http://ace.ajax.org>
-   [node.js]: <http://nodejs.org>
-   [Twitter Bootstrap]: <http://twitter.github.com/bootstrap/>
-   [jQuery]: <http://jquery.com>
-   [@tjholowaychuk]: <http://twitter.com/tjholowaychuk>
-   [express]: <http://expressjs.com>
-   [WordPress]: <https://wordpress.com/>
-   [Gulp]: <http://gulpjs.com>
-
-   [PlDb]: <https://www.meetup.com/WordPress-Kanpur/>
-   [PlGh]: <https://www.meetup.com/KanpurPython/>
-   [PlGd]: <https://www.meetup.com/Docker-Kanpur/>
-   [PlOd]: <https://www.meetup.com/PyDataKanpur/>
-   [PlMe]: <https://www.meetup.com/makerspacekanpur/>
-   [PlGa]: <https://www.meetup.com/kanpur-js/>
+  [IoT]:<https://en.wikipedia.org/wiki/Internet_of_things>
+  [JavaScript]:<https://www.javascript.com/>
+  [Docker]:<https://www.docker.com/>
+  [Python]:<https://www.python.org/>
+  [WordPress]:<http://wordpress.org>
+  [HackerSpace]:<>
+  [slack]:<https://wpkanpur.herokuapp.com/>
+  [node.js]:<http://nodejs.org>
+  [Twitter Bootstrap]:<http://twitter.github.com/bootstrap/>
+  [jQuery]:<http://jquery.com>
+  
+  [PlDb]: <https://www.meetup.com/WordPress-Kanpur/>
+  [PlGh]: <https://www.meetup.com/KanpurPython/>
+  [PlGd]: <https://www.meetup.com/Docker-Kanpur/>
+  [PlOd]: <https://www.meetup.com/PyDataKanpur/>
+  [PlMe]: <https://www.meetup.com/makerspacekanpur/>
+  [PlGa]: <https://www.meetup.com/kanpur-js/>
