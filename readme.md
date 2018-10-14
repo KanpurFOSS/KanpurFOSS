@@ -64,7 +64,7 @@ GPL 3.0
   [Python]:<https://www.python.org/>
   [WordPress]:<http://wordpress.org>
   [HackerSpace]:<>
-  [slack]:<https://wpkanpur.herokuapp.com/>
+  [slack]: <https://wpkanpur.herokuapp.com/>
   [node.js]:<http://nodejs.org>
   [Twitter Bootstrap]:<http://twitter.github.com/bootstrap/>
   [jQuery]:<http://jquery.com>
