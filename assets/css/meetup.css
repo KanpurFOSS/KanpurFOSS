@@ -220,6 +220,10 @@
 	text-decoration: none;
 }
 
+iframe {
+	max-width: 100%;
+}
+
 @media screen and (max-width: 768px) {
 	.site-nav {
 		z-index: 1;
@@ -253,4 +257,4 @@
 	.card-media-body-supporting-bottom .u-float-right {
 		float: none;
 	}
-  }
+}

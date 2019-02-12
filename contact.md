@@ -1,7 +1,7 @@
 ---
 title: Contact
 layout: page
-permalink: "/contact/"
+permalink: contact
 menu: main
 ---
 
