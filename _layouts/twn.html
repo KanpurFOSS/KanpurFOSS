@@ -1,0 +1,87 @@
+---
+layout: page
+---
+
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+</head>
+
+<body>
+    <ol id="results" style="list-style-type: none;" start="1">
+        <style>
+            a {
+                color: black;
+                text-align: center;
+            }
+
+            .post-header {
+                text-align: center;
+            }
+
+            #results {
+                margin: 0.5rem auto;
+                text-align: center;
+            }
+
+            #results li {
+                margin: 0.5rem auto;
+            }
+
+            img {
+                -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+                -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+                box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+                margin: 0.5rem auto;
+                -moz-transition: all ease 0.5s;
+                -webkit-transition: all 0.5s ease;
+                transition: all 0.5s ease;
+                -o-transition: all ease 0.5s;
+            }
+
+            img:hover {
+                transform: scale(1.025);
+                -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+                -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+                box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+                -moz-transition: all ease 0.5s;
+                -webkit-transition: all 0.5s ease;
+                transition: all 0.5s ease;
+                -o-transition: all ease 0.5s;
+            }
+            hr{
+                opacity: 0.5;
+            }
+            #desc{
+                opacity: 0.5;
+            }
+        </style>
+    </ol>
+
+    <script>
+        $(document).ready(function () {
+            $.get(
+                "https://www.googleapis.com/youtube/v3/search", {
+                    part: 'snippet',
+                    channelId: 'UCyRzM-KFexoNcvXe0dMsipQ', // You can get one from Advanced settings on YouTube
+                    type: 'video',
+                    order: 'date',
+                    key: 'AIzaSyAgWQqqG5a-4EOlBQYoa5wU27ESyXtEueo'
+                },
+                function (data) {
+                    $.each(data.items, function (i, item) {
+                        $('#results').append(
+                            '<li><a target="_blank" href="https://www.youtube.com/watch?v=' +
+                            item.id.videoId + '"><img src="' + item.snippet.thumbnails.medium
+                            .url + '"></img><br><h3>' + item.snippet.title +
+                            '</h3></a><p id="desc">'+ item.snippet.description +'</p></li><hr>');
+                    })
+                }
+            );
+        });
+    </script>
+</body>
+
+</html>
