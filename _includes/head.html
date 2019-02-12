@@ -5,10 +5,15 @@
   <link rel="shortcut icon" type="image/png" href="{{ "assets/images/favicon.ico" | relative_url }}"/>
   {%- seo -%}
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  {% if page.layout == "home" or page.layout == "twn" %}
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  {% endif %}
   {% if page.layout == "home" %}
   <link rel="stylesheet" href="{{ "/assets/css/meetup.css" | relative_url }}">
-  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
   <script src="{{ "/assets/js/meetup-api.js" | relative_url }}"></script>
+  {% endif %}
+  {% if page.layout == "twn" %}
+  <link rel="stylesheet" href="{{ "/assets/css/meetup.css" | relative_url }}">
   {% endif %}
   {%- feed_meta -%}
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
