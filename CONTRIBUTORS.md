@@ -4,3 +4,4 @@
 * Tushar Mittal [@techytushar](https://github.com/techytushar)
 * Hitanshu Sahu [@Phantom-Cluster](https://github.com/Phantom-Cluster)
 * Himanshu Awasthi [@HimanshuAwasthi95](https://github.com/HimanshuAwasthi95)
+* Harsh Trivedi [@harsh98trivedi](https://github.com/harsh98trivedi)
