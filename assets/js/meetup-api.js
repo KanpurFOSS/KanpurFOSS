@@ -58,21 +58,21 @@ const groupQuery = (urlName) => {
           title
           id
           dateTime
-					eventUrl
-					going
-					venue {
-						name
-						address
-						city
-						state
-						postalCode
-						crossStreet
-					}
-					group {
-						urlname 
-						name
-						customMemberLabel
-					}
+          eventUrl
+          going
+          venue {
+            name
+            address
+            city
+            state
+            postalCode
+            crossStreet
+          }
+          group {
+            urlname 
+            name
+            customMemberLabel
+          }
         }
       }
     }
@@ -96,8 +96,9 @@ $(document).ready(() => {
 	group5: ${groupQuery("KanpurPython")}
   group6: ${groupQuery("makerspacekanpur")}
   group7: ${groupQuery("kanpur-js")}
-	group8: ${groupQuery("wordpress-new-delhi")}
+	group8: ${groupQuery("wordpress-new-delhi")} 
 }`,
+      // Remove the last group. Only for testing purpose
     }),
     success: (data) => {
       console.log(
