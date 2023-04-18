@@ -1,93 +1,183 @@
 const events = [];
 
-function formatDate( date ) {
-	const monthNames = [
-		'January', 'February', 'March',
-		'April', 'May', 'June', 'July',
-		'August', 'September', 'October',
-		'November', 'December'
-	];
-	const weekNames = [
-		'Sunday', 'Monday', 'Tuesday', 'Wednesday',
-		'Thursday' ,'Friday', 'Saturday',
-	];
-	const hours = date.getHours() > 12 ? date.getHours() - 12 : date.getHours();
-	const minutes = date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes();
-	const am_pm = date.getHours() >= 12 ? 'PM' : 'AM';
-	const time = hours + ':' + minutes + ' ' + am_pm;
-	const dayofWeek = date.getDay();
-	const day = date.getDate();
-	const monthIndex = date.getMonth();
-	const year = date.getFullYear();
-	return time + ', ' + weekNames[dayofWeek] + ', ' + day + ', ' + monthNames[monthIndex];
+function formatDate(date) {
+  const monthNames = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  const weekNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  const hours = date.getHours() > 12 ? date.getHours() - 12 : date.getHours();
+  const minutes = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
+  const am_pm = date.getHours() >= 12 ? "PM" : "AM";
+  const time = hours + ":" + minutes + " " + am_pm;
+  const dayofWeek = date.getDay();
+  const day = date.getDate();
+  const monthIndex = date.getMonth();
+  const year = date.getFullYear();
+  return time + ", " + weekNames[dayofWeek] + ", " + day + ", " + monthNames[monthIndex];
 }
 
-function dateToISO( date ) {
-	return ( new Date( date ) ).toISOString().replace( /-|:|\.\d\d\d/g, '' );
+function dateToISO(date) {
+  return new Date(date).toISOString().replace(/-|:|\.\d\d\d/g, "");
 }
 
-function addToCalendar( event ) {
-	const duration = ( ( event.duration !== undefined ) ? event.duration : 7200000 );
-	const link = `http://www.google.com/calendar/event?action=TEMPLATE&text=${event.name}&details=More+Info:+${event.event_url}&dates=${dateToISO( event.time )}/${dateToISO( event.time + duration )}&location=${event.venue.name + ',+' + event.venue.address_1 + ',+' + event.venue.city}`;
-	return link;
+function addToCalendar(event) {
+  const duration = event.duration !== undefined ? event.duration : 7200000;
+  const link = `http://www.google.com/calendar/event?action=TEMPLATE&text=${
+    event.title
+  }&details=More+Info:+${event.eventUrl}&dates=${dateToISO(new Date(event.dateTime))}/${dateToISO(
+    new Date(event.dateTime) + duration
+  )}&location=${
+    event.venue
+      ? event.venue.name + ",+" + event.venue.address + ",+" + event.venue.city
+      : "Needs a Location"
+  }`;
+  return link;
 }
 
-$( document ).ready( () => {
-	$.ajax({
-		url: 'https://api.meetup.com/2/events?offset=0&format=json&limited_events=False&group_id=28676809%2C15832012%2C15813572%2C15719982%2C23027469%2C25604122%2C26350537&photo-host=public&page=20&fields=&order=time&desc=false&status=upcoming&sig_id=132403932&sig=5653b4d042a5fca1e53a89953c785f6248c3c63d',
-		dataType: 'jsonp',
-		success: data => {
-			events.push(...data['results'])
-			const html = events.map( event => {
-				if ( event.group.urlname === 'WordPress-Kanpur' ) {
-					group = 'wordpress';
-				} else if ( event.group.urlname === 'Docker-Kanpur' ) {
-					group = 'docker';
-				} else if ( event.group.urlname === 'hackerspace-kanpur' ) {
-					group = 'hackerspace';
-				} else if ( event.group.urlname === 'PyDataKanpur' ) {
-					group = 'pydata';
-				} else if ( event.group.urlname === 'KanpurPython' ) {
-					group = 'python';
-				} else if ( event.group.urlname === 'makerspacekanpur' ) {
-					group = 'arduino';
-				} else if ( event.group.urlname === 'kanpur-js' ) {
-					group = 'javascript';
-				}
-				return `<div class="card-media">
+const groupQuery = (urlName) => {
+  return `groupByUrlname(urlname: "${urlName}") {
+    name
+    unifiedEvents(input: {first: 3}) {
+      count
+      pageInfo {
+        endCursor
+      }
+      edges {
+        node {
+          title
+          id
+          dateTime
+					eventUrl
+					going
+					venue {
+						name
+						address
+						city
+						state
+						postalCode
+						crossStreet
+					}
+					group {
+						urlname 
+						name
+						customMemberLabel
+					}
+        }
+      }
+    }
+  }`;
+};
+$(document).ready(() => {
+  $.ajax({
+    url: "https://cors-anywhere.herokuapp.com/https://api.meetup.com/gql",
+    dataType: "json",
+    method: "POST",
+    contentType: "application/json",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    data: JSON.stringify({
+      query: `query {
+	group1: ${groupQuery("WordPress-Kanpur")}
+	group2: ${groupQuery("Docker-Kanpur")}
+	group3: ${groupQuery("hackerspace-kanpur")}
+	group4: ${groupQuery("PyDataKanpur")}
+	group5: ${groupQuery("KanpurPython")}
+  group6: ${groupQuery("makerspacekanpur")}
+  group7: ${groupQuery("kanpur-js")}
+	group8: ${groupQuery("wordpress-new-delhi")}
+}`,
+    }),
+    success: (data) => {
+      console.log(
+        Object.keys(data.data)
+          .map((group) => data.data[group].unifiedEvents?.edges.map((node) => node.node))
+          .flat()
+      );
+      events.push(
+        ...Object.keys(data.data)
+          .map((group) => data.data[group].unifiedEvents?.edges.map((node) => node.node))
+          .flat()
+      );
+      const html = events
+        .map((event) => {
+          if (event.group.urlname === "WordPress-Kanpur") {
+            group = "wordpress";
+          } else if (event.group.urlname === "Docker-Kanpur") {
+            group = "docker";
+          } else if (event.group.urlname === "hackerspace-kanpur") {
+            group = "hackerspace";
+          } else if (event.group.urlname === "PyDataKanpur") {
+            group = "pydata";
+          } else if (event.group.urlname === "KanpurPython") {
+            group = "python";
+          } else if (event.group.urlname === "makerspacekanpur") {
+            group = "arduino";
+          } else if (event.group.urlname === "kanpur-js") {
+            group = "javascript";
+          }
+          return `<div class="card-media">
 							<div class="card-media-object-container">
 								<div class="card-media-object" style="background-image: url('/assets/images/${group}.png');"></div>
-								${ new Date().getDate() === new Date( event.time ).getDate() ? '<span class="card-media-object-tag subtle">Today</span>' : '' }
+								${
+                  new Date().getDate() === new Date(event.dateTime).getDate()
+                    ? '<span class="card-media-object-tag subtle">Today</span>'
+                    : ""
+                }
 							</div>
 							<div class="card-media-body">
 								<div class="card-media-body-top">
-									<span class="subtle">${formatDate( new Date( event.time ) )}</span>
+									<span class="subtle">${formatDate(new Date(event.dateTime))}</span>
 									<div class="card-media-body-top-icons u-float-right">
-										<a href="https://www.facebook.com/sharer/sharer.php?u=${event.event_url}" target="_blank" title="Share on Facebook">
+										<a href="https://www.facebook.com/sharer/sharer.php?u=${
+                      event.eventUrl
+                    }" target="_blank" title="Share on Facebook">
 											<svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#facebook"></use></svg>
 										</a>
-										<a href="https://twitter.com/intent/tweet?text=${event.name + ': ' + event.event_url}&via=KanpurFOSS" target="_blank" title="Share on Twitter">
+										<a href="https://twitter.com/intent/tweet?text=${
+                      event.title + ": " + event.eventUrl
+                    }&via=KanpurFOSS" target="_blank" title="Share on Twitter">
 											<svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg>
 										</a>
-										<a href="${addToCalendar( event )}" target="_blank" title="Add to Calendar">
+										<a href="${addToCalendar(event)}" target="_blank" title="Add to Calendar">
 											<img src="/assets/icons/calendar.svg" />
 										</a>
 									</div>
 								</div>
-								<a href="${event.event_url}" target="_blank" class="card-media-body-heading">${event.name}</a>
+								<a href="${event.eventUrl}" target="_blank" class="card-media-body-heading">${event.title}</a>
 								<div class="card-media-body-supporting-bottom">
 									<span class="card-media-body-supporting-bottom-text subtle">${event.group.name}</span>
-									<span class="card-media-body-supporting-bottom-text subtle u-float-right">${event.yes_rsvp_count + ' ' + event.group.who} going</span>
+									<span class="card-media-body-supporting-bottom-text subtle u-float-right">${
+                    event.going + " " + event.group.customMemberLabel
+                  } going</span>
 								</div>
 								<div class="card-media-body-supporting-bottom card-media-body-supporting-bottom-reveal">
-									<span class="card-media-body-supporting-bottom-text subtle">${event.venue.name + ', ' + event.venue.address_1 + ', ' + event.venue.city}</span>
-									<a href="${event.event_url}" target="_blank" class="card-media-body-supporting-bottom-text card-media-link u-float-right">RSVP</a>
+									<span class="card-media-body-supporting-bottom-text subtle">${
+                    event.venue
+                      ? event.venue.name + ", " + event.venue.address + ", " + event.venue.city
+                      : "Needs a location"
+                  }</span>
+									<a href="${
+                    event.eventUrl
+                  }" target="_blank" class="card-media-body-supporting-bottom-text card-media-link u-float-right">RSVP</a>
 								</div>
 							</div>
-						</div>`
-			} ).join('');
-			const container = document.querySelector( '.container' );
-			container.innerHTML = html;
-		}
-	});
+						</div>`;
+        })
+        .join("");
+      const container = document.querySelector(".container");
+      container.innerHTML = html;
+    },
+  });
 });
