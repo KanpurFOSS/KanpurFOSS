@@ -27,24 +27,6 @@ function formatDate(date) {
   return time + ", " + weekNames[dayofWeek] + ", " + day + ", " + monthNames[monthIndex];
 }
 
-function dateToISO(date) {
-  return new Date(date).toISOString().replace(/-|:|\.\d\d\d/g, "");
-}
-
-function addToCalendar(event) {
-  const duration = event.duration !== undefined ? event.duration : 7200000;
-  const link = `http://www.google.com/calendar/event?action=TEMPLATE&text=${
-    event.title
-  }&details=More+Info:+${event.eventUrl}&dates=${dateToISO(new Date(event.dateTime))}/${dateToISO(
-    new Date(event.dateTime) + duration
-  )}&location=${
-    event.venue
-      ? event.venue.name + ",+" + event.venue.address + ",+" + event.venue.city
-      : "Needs a Location"
-  }`;
-  return link;
-}
-
 const groupQuery = (urlName) => {
   return `groupByUrlname(urlname: "${urlName}") {
     name
@@ -86,6 +68,8 @@ $(document).ready(() => {
     contentType: "application/json",
     headers: {
       "Content-Type": "application/json",
+      "Access-Control-Allow-Headers": "X-Requested-With",
+      "X-Requested-With": "XMLHttpRequest" 
     },
     data: JSON.stringify({
       query: `query {
@@ -150,9 +134,6 @@ $(document).ready(() => {
                       event.title + ": " + event.eventUrl
                     }&via=KanpurFOSS" target="_blank" title="Share on Twitter">
 											<svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg>
-										</a>
-										<a href="${addToCalendar(event)}" target="_blank" title="Add to Calendar">
-											<img src="/assets/icons/calendar.svg" />
 										</a>
 									</div>
 								</div>
