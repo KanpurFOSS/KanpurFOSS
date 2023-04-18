@@ -78,9 +78,8 @@ $(document).ready(() => {
 	group3: ${groupQuery("hackerspace-kanpur")}
 	group4: ${groupQuery("PyDataKanpur")}
 	group5: ${groupQuery("KanpurPython")}
-  group6: ${groupQuery("makerspacekanpur")}
-  group7: ${groupQuery("kanpur-js")}
-	group8: ${groupQuery("wordpress-new-delhi")} 
+  	group6: ${groupQuery("makerspacekanpur")}
+  	group7: ${groupQuery("kanpur-js")}
 }`,
       // Remove the last group. Only for testing purpose
     }),
