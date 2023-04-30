@@ -27,73 +27,18 @@ function formatDate(date) {
   return time + ", " + weekNames[dayofWeek] + ", " + day + ", " + monthNames[monthIndex];
 }
 
-const groupQuery = (urlName) => {
-  return `groupByUrlname(urlname: "${urlName}") {
-    name
-    unifiedEvents(input: {first: 3}) {
-      count
-      pageInfo {
-        endCursor
-      }
-      edges {
-        node {
-          title
-          id
-          dateTime
-          eventUrl
-          going
-          venue {
-            name
-            address
-            city
-            state
-            postalCode
-            crossStreet
-          }
-          group {
-            urlname 
-            name
-            customMemberLabel
-          }
-        }
-      }
-    }
-  }`;
-};
 $(document).ready(() => {
   $.ajax({
-    url: "https://cors-anywhere.herokuapp.com/https://api.meetup.com/gql",
+    url: "https://kanpurfoss-meetup-api-proxy.onrender.com/upcoming-meetups",
     dataType: "json",
-    method: "POST",
     contentType: "application/json",
     headers: {
       "Content-Type": "application/json",
       "Access-Control-Allow-Headers": "X-Requested-With",
-      "X-Requested-With": "XMLHttpRequest" 
+      "X-Requested-With": "XMLHttpRequest",
     },
-    data: JSON.stringify({
-      query: `query {
-	group1: ${groupQuery("WordPress-Kanpur")}
-	group2: ${groupQuery("Docker-Kanpur")}
-	group3: ${groupQuery("hackerspace-kanpur")}
-	group4: ${groupQuery("PyDataKanpur")}
-	group5: ${groupQuery("KanpurPython")}
-  	group6: ${groupQuery("makerspacekanpur")}
-  	group7: ${groupQuery("kanpur-js")}
-}`,
-      // Remove the last group. Only for testing purpose
-    }),
     success: (data) => {
-      console.log(
-        Object.keys(data.data)
-          .map((group) => data.data[group].unifiedEvents?.edges.map((node) => node.node))
-          .flat()
-      );
-      events.push(
-        ...Object.keys(data.data)
-          .map((group) => data.data[group].unifiedEvents?.edges.map((node) => node.node))
-          .flat()
-      );
+      events.push(...data.upcomingMeetups);
       const html = events
         .map((event) => {
           if (event.group.urlname === "WordPress-Kanpur") {
