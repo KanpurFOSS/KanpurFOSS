@@ -29,6 +29,14 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+      
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          
+      - name: Install dependencies
+        run: npm install
           
       - name: Fetch Meetup Events
         run: npm run fetch
@@ -59,16 +67,21 @@ jobs:
         with:
           ref: ${{ github.ref }}
           
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.2'
-          bundler-cache: true
+          
+      - name: Install dependencies
+        run: npm install
           
       - name: Build Jekyll site
-        run: |
-          bundle install
-          bundle exec jekyll build
+        run: npm run build
           
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

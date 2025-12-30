@@ -3,13 +3,15 @@
   "version": "1.0.0",
   "description": "KanpurFOSS Community Website",
   "scripts": {
+    "setup": "bundle install",
     "fetch": "node scripts/fetch-meetup-events.js",
     "build": "bundle exec jekyll build",
     "serve": "bundle exec jekyll serve --livereload",
     "dev": "npm run fetch && npm run serve",
     "start": "npm run dev",
     "update": "npm run fetch && npm run build",
-    "deploy": "npm run update"
+    "deploy": "npm run update",
+    "postinstall": "bundle install"
   },
   "keywords": [
     "kanpur",
