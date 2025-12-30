@@ -75,62 +75,120 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     window.initScrollAnimations();
 
-    // 4. Dynamic Marquee Generation (Smooth, Endless, Config-controlled)
+    // 4. Dynamic Marquee Generation (Premium, Truly Seamless, Infinite)
     const initMarquees = () => {
-        const topKeywords = ["Python", "Open Source", "WordPress", "Javascript", "Docker", "Rust", "Kubernetes", "Linux", "Git", "AI", "Machine Learning"];
-        const bottomKeywords = ["Community", "Collaboration", "Innovation", "Networking", "Kanpur.js", "PyData", "Hackerspace", "Makerspace", "Security", "Privacy", "Design", "UX"];
+        const topKeywords = [
+  "Python", 
+  "WordPress", 
+  "JavaScript", 
+  "Docker", 
+  "Rust", 
+  "Kubernetes", 
+  "Linux", 
+  "Git", 
+  "AI", 
+  "WebAssembly", 
+  "PostgreSQL", 
+  "React",
+  "Svelte",
+  "Vue"
+];
 
-        const generateHTML = (keywords) => {
-            const items = keywords.map(tag => `
-                <span class="flex-shrink-0 text-sm uppercase font-medium tracking-widest mx-6">${tag}</span>
-                <span class="flex-shrink-0 text-lg opacity-50 mx-6">•</span>
-            `).join('');
-            // Triple the content for seamless infinite loop
-            return `<div class="marquee-track flex items-center whitespace-nowrap">${items}${items}${items}</div>`;
-        };
+const bottomKeywords = [
+  "Kanpur WordPress Meetup", 
+  "Docker Kanpur", 
+  "HS4: Hackerspace", 
+  "PyData Kanpur", 
+  "Kanpur Python", 
+  "Makers and Coders of Kanpur", 
+  "Collaboration", 
+  "Community", 
+  "Innovation", 
+  "Open Source", 
+  "Networking", 
+  "Kanpur.js"
+];
 
-        const blackMarquee = document.getElementById('marquee-black');
-        const whiteMarquee = document.getElementById('marquee-white');
+        const createMarquee = (elementId, keywords) => {
+            const container = document.getElementById(elementId);
+            if (!container) return;
 
-        if (blackMarquee) blackMarquee.innerHTML = generateHTML(topKeywords);
-        if (whiteMarquee) whiteMarquee.innerHTML = generateHTML(bottomKeywords);
+            // 1. Setup DOM Structure
+            container.innerHTML = '';
+            const track = document.createElement('div');
+            
+            // Apply flex styles explicitly to ensure layout works
+            track.className = 'marquee-track marquee-content';
+            track.style.display = 'flex';
+            track.style.alignItems = 'center';
+            track.style.width = 'max-content';
+            track.style.willChange = 'transform';
+            
+            container.appendChild(track);
 
-        // Animate each marquee
-        document.querySelectorAll('.marquee-track').forEach((track) => {
-            const container = track.parentElement;
+            const generateItems = () => {
+                return keywords.map(tag => `
+                    <div class="marquee-item" style="display: flex; align-items: center; flex-shrink: 0;">
+                        <span style="font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: inherit;">${tag}</span>
+                        <span class="separator" style="margin: 0 40px; opacity: 0.4;">•</span>
+                    </div>
+                `).join('');
+            };
+
+            // 2. Precise Measurement Logic
+            // Add Set 1
+            track.innerHTML = generateItems();
+            const widthSet1 = track.scrollWidth;
+
+            // Add Set 2
+            track.innerHTML += generateItems();
+            const widthSet2 = track.scrollWidth;
+
+            // The exact distance to travel one full loop
+            const travelDistance = widthSet2 - widthSet1;
+
+            // 3. Fill the screen (4 sets usually covers all standard widths)
+            track.innerHTML += generateItems();
+            track.innerHTML += generateItems();
+
+            // 4. Configure Animation
             const isReverse = container.classList.contains('reverse');
+            // Base speed: pixels per second
+            const baseSpeed = 50; 
+            const duration = travelDistance / baseSpeed;
             
-            // Get speed from data attribute (set via Jekyll config)
-            const speed = parseFloat(container.dataset.speed) || (isReverse ? 25 : 10);
+            // Allow override via data-speed (acts as raw duration override or multiplier if needed, keeping simple here)
+            const configSpeed = parseFloat(container.dataset.speed) || (isReverse ? 40 : 30);
             
-            // Create the animation
-            const tween = gsap.to(track, {
-                xPercent: isReverse ? 0 : -33.333, // Move by 1/3 since we tripled content
-                repeat: -1,
-                duration: speed,
-                ease: "linear", // Perfectly smooth, constant speed
-                ...(isReverse && { xPercent: -33.333, reversed: true })
-            });
+            let tween;
 
-            // For reverse, start from offset position
             if (isReverse) {
-                gsap.set(track, { xPercent: -33.333 });
-                gsap.to(track, {
-                    xPercent: 0,
-                    repeat: -1,
-                    duration: speed,
-                    ease: "linear"
+                // Moving RIGHT
+                gsap.set(track, { x: -travelDistance });
+                tween = gsap.to(track, {
+                    x: 0,
+                    duration: configSpeed,
+                    ease: "none",
+                    repeat: -1
+                });
+            } else {
+                // Moving LEFT
+                gsap.set(track, { x: 0 });
+                tween = gsap.to(track, {
+                    x: -travelDistance,
+                    duration: configSpeed,
+                    ease: "none",
+                    repeat: -1
                 });
             }
-            
-            // Pause on hover for better UX
-            container.addEventListener('mouseenter', () => {
-                gsap.to(track, { timeScale: 0, duration: 0.3, ease: "power2.out" });
-            });
-            container.addEventListener('mouseleave', () => {
-                gsap.to(track, { timeScale: 1, duration: 0.3, ease: "power2.out" });
-            });
-        });
+
+            // 5. Interaction
+            container.addEventListener('mouseenter', () => tween.timeScale(0));
+            container.addEventListener('mouseleave', () => gsap.to(tween, { timeScale: 1, duration: 0.5 }));
+        };
+
+        createMarquee('marquee-black', topKeywords);
+        createMarquee('marquee-white', bottomKeywords);
     };
     initMarquees();
 
