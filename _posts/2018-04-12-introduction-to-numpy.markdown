@@ -4,6 +4,7 @@ layout: post
 date: '2018-04-12 01:00:00'
 categories: python pydata
 author: Tushar Mittal
+author_url: https://github.com/techytushar
 ---
 
 [NumPy](http://www.numpy.org/) is a Python tools for scientific computing. It can be used to:

@@ -41,4 +41,20 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-# Last updated: 2025-12-30 (2)
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: ""
+      author_url: ""
+
+# Last updated: 2025-12-30 (3)
+
+# Marquee Settings
+# Speed values are in seconds (lower = faster)
+marquee:
+  speed_black: 20  # Speed of the black/top marquee band
+  speed_white: 25  # Speed of the white/bottom marquee band

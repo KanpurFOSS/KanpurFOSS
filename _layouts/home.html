@@ -1,28 +1,71 @@
 ---
-layout: home
+layout: compress
 ---
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
   {%- include head.html -%}
 
-  <body>
+  <body class="flex flex-col min-h-screen bg-white antialiased">
 
+    <!-- ==================== NAVBAR ==================== -->
     {%- include header.html -%}
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <header class="post-header">
-          <h1 class="post-title">Upcoming Meetups</h1>
-        </header>
-        <div class="container">
-          <div class="loader">
-            <span class="bracket">{</span><span>Loading</span><span class="bracket">}</span>
+    <main class="flex-grow" aria-label="Content">
+
+      <!-- ==================== HERO: UPCOMING MEETUPS ==================== -->
+      <section class="py-12 md:py-16">
+        <div class="max-w-5xl mx-auto px-4">
+          
+          <!-- Section Title -->
+          <h1 class="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-12">
+            Upcoming Meetups
+          </h1>
+
+          <!-- Events Container -->
+          <div id="events-container">
+            <!-- Loader -->
+            <div class="loader text-center py-16 text-gray-400">
+              <div class="inline-flex items-center gap-2">
+                <span class="text-lg">{</span>
+                <span class="text-sm">Loading</span>
+                <span class="text-lg">}</span>
+              </div>
+            </div>
           </div>
-        </div>		  
-      </div>
+
+        </div>
+      </section>
+
+      <!-- ==================== MARQUEE SECTION ==================== -->
+      <section class="marquee-section border-y border-gray-200 overflow-hidden">
+        <div id="marquee-black" class="marquee-container reverse w-full overflow-hidden bg-black text-white py-5" data-speed="{{ site.marquee.speed_black | default: 20 }}"></div>
+        <div id="marquee-white" class="marquee-container w-full overflow-hidden bg-white text-black py-5 border-t border-gray-100" data-speed="{{ site.marquee.speed_white | default: 25 }}"></div>
+      </section>
+
+      <!-- ==================== OUR COMMUNITIES ==================== -->
+      <section class="py-16 md:py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+          
+          <!-- Section Title -->
+          <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4">
+            Our Communities
+          </h2>
+          <p class="text-center text-gray-500 mb-12 max-w-2xl mx-auto">
+            Join our various tech communities in Kanpur
+          </p>
+
+          <!-- Groups Container (Single column for horizontal cards) -->
+          <div id="groups-container" class="flex flex-col gap-6 max-w-5xl mx-auto">
+            <!-- Groups will be loaded here by JS -->
+          </div>
+
+        </div>
+      </section>
+
     </main>
 
+    <!-- ==================== FOOTER ==================== -->
     {%- include footer.html -%}
 
   </body>

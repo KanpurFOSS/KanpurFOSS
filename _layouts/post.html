@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<article class="post w-full max-w-3xl mx-auto px-4">
+  <header class="post-header text-center mb-12">
+    <h1 class="post-title text-4xl md:text-5xl font-bold mb-4 tracking-tight leading-tight">{{ page.title | escape }}</h1>
+    <div class="post-meta-header text-gray-500 font-medium">
+      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+      <time datetime="{{ page.date | date_to_xmlschema }}">
+        {{ page.date | date: date_format }}
+      </time>
+      {%- if page.author -%}
+        • <span class="post-author">
+          by&nbsp;
+          {%- if page.author_url -%}
+            <a href="{{ page.author_url }}" target="_blank" class="hover:text-black hover:underline transition-colors">{{ page.author }}</a>
+          {%- else -%}
+            {{ page.author }}
+          {%- endif -%}
+        </span>
+      {%- endif -%}
+    </div>
+  </header>
+
+  <div class="post-content prose prose-lg prose-gray mx-auto prose-headings:font-bold prose-headings:tracking-tight prose-a:text-black prose-a:no-underline prose-a:border-b prose-a:border-black hover:prose-a:border-transparent prose-img:rounded-lg">
+    {{ content }}
+  </div>
+
+  <footer class="post-footer mt-16 pt-8 border-t border-gray-100">
+    <div class="post-nav flex justify-between items-center text-sm font-bold">
+      {% if page.previous.url %}
+        <a class="prev hover:text-gray-600 transition-colors" href="{{ page.previous.url | relative_url }}">← {{ page.previous.title }}</a>
+      {% else %}
+        <span></span>
+      {% endif %}
+      
+      {% if page.next.url %}
+        <a class="next hover:text-gray-600 transition-colors" href="{{ page.next.url | relative_url }}">{{ page.next.title }} →</a>
+      {% endif %}
+    </div>
+  </footer>
+</article>

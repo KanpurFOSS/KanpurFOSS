@@ -4,6 +4,7 @@ layout: post
 date: '2018-05-11 12:28:00'
 categories: python pydata
 author: Himanshu Awasthi
+author_url: https://github.com/iHackPY
 ---
 
 We all are in the era of [Artificial Intelligence](https://en.wikipedia.org/wiki/Artificial_intelligence). Tech giants like Google, Microsoft & Facebook investing in AI. **Amazon's Alexa** also shows how stiff competition is going into the market of AI, not only Google & Apple but other companies also dominate the tech market if they have the power of AI. There is a tremendous opportunity in 2018 for people who are looking for jobs in Machine Learning, Deep Learning & AI. Sometimes it seems like Machine Learning & AI both are the same things, but there is a fundamental difference between them. Here's the best explanation about this:

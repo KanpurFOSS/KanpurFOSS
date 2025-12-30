@@ -98,6 +98,12 @@
     transform: translateY(-2px);
 }
 
+@media screen and (min-width: 769px) {
+    .card-media-inverted {
+        flex-direction: row-reverse;
+    }
+}
+
 /* Image Container */
 .card-media-object-container {
     flex: 0 0 50%;
@@ -145,6 +151,7 @@
 .card-media-body-heading {
     display: -webkit-box;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -296,3 +303,12 @@
         font-size: 50px;
     }
 }
+
+/* Groups List */
+.groups-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 68px;
+}
+

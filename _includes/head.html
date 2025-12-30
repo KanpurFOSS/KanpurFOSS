@@ -5,13 +5,17 @@
   <link rel="shortcut icon" type="image/x-icon" href="{{ "assets/images/favicon.ico" | relative_url }}"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="{{ "/assets/js/vendor/jquery.min.js" | relative_url }}"></script>
+  <script src="{{ "/assets/js/vendor/gsap.min.js" | relative_url }}"></script>
+  <script src="{{ "/assets/js/vendor/ScrollTrigger.min.js" | relative_url }}"></script>
+  <script src="{{ "/assets/js/main.js" | relative_url }}?v={{ site.time | date: '%s' }}"></script>
   {%- seo -%}
+  <link rel="stylesheet" href="{{ "/assets/css/tailwind.css" | relative_url }}">
+  <!-- Legacy Styles (Disabled for Redesign)
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
   <link rel="stylesheet" href="{{ "/assets/css/custom.css" | relative_url }}">
-  {% if page.layout == "home" or page.layout == "twn" %}
-  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-  {% endif %}
+  -->
   {% if page.layout == "home" %}
   <link rel="stylesheet" href="{{ "/assets/css/meetup.css" | relative_url }}">
   <script src="{{ "/assets/js/meetup-api.js" | relative_url }}?v={{ site.time | date: '%s' }}"></script>

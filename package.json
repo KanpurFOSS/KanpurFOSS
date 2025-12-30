@@ -5,25 +5,40 @@
   "scripts": {
     "setup": "bundle install",
     "fetch": "node scripts/fetch-meetup-events.js",
-    "build": "bundle exec jekyll build",
+    "build": "npm run build:css && bundle exec jekyll build",
     "serve": "bundle exec jekyll serve --livereload",
-    "dev": "npm run fetch && npm run serve",
+    "build:css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/tailwind.css",
+    "watch:css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/tailwind.css --watch",
+    "dev": "concurrently \"npm run watch:css\" \"npm run fetch && npm run serve\"",
     "start": "npm run dev",
     "update": "npm run fetch && npm run build",
     "deploy": "npm run update",
-    "postinstall": "bundle install"
+    "vendor": "node scripts/vendor-sync.js",
+    "postinstall": "bundle install && npm run vendor"
   },
   "keywords": [
     "kanpur",
     "foss",
     "meetup",
     "community",
-    "jekyll"
+    "jekyll",
+    "wordpress"
   ],
   "author": "KanpurFOSS",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/KanpurFOSS/KanpurFOSS.git"
+  },
+  "dependencies": {
+    "gsap": "^3.12.5",
+    "jquery": "^3.7.1"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1",
+    "postcss": "^8.4.35",
+    "autoprefixer": "^10.4.17",
+    "@tailwindcss/typography": "^0.5.10",
+    "concurrently": "^8.2.2"
   }
 }

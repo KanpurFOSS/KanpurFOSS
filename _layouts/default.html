@@ -1,0 +1,23 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body class="flex flex-col min-h-screen bg-white">
+
+    {%- include header.html -%}
+
+    <main class="page-content flex-grow py-16" aria-label="Content">
+      <div class="wrapper container mx-auto px-4">
+        {{ content }}
+      </div>
+    </main>
+
+    {%- include footer.html -%}
+
+  </body>
+
+</html>
