@@ -46,16 +46,18 @@ jobs:
         run: |
           git diff --quiet assets/data/meetup-events.json || echo "changed=true" >> $GITHUB_OUTPUT
           
-      - name: Commit and Push Changes
+      - name: Create Pull Request
         if: steps.git-check.outputs.changed == 'true'
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action Bot"
-          git add assets/data/meetup-events.json
-          git commit -m "🗓️ Auto-update meetup events [skip ci]"
-          git push
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "🗓️ Auto-update meetup events"
+          title: "🗓️ Auto-update meetup events"
+          body: "This PR updates the meetup events JSON file with the latest data from Meetup RSS feeds."
+          branch: "auto-update-events"
+          base: "development"
+          delete-branch: true
 
-  # Build and deploy Jekyll site (only on master/main)
   build-deploy:
     runs-on: ubuntu-latest
     needs: update-events
