@@ -1,3 +1,8 @@
+/* Global box-sizing fix */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 .page-content h1.post-title {
 	text-align: center;
 }
@@ -50,7 +55,8 @@
   
 .container {
 	margin: 50px auto 0;
-	/* width: 700px; */
+	max-width: 800px; /* Constrain width as requested */
+    width: 90%; /* Responsive fallback */
 }
 	
 .u-float-right {
@@ -71,190 +77,222 @@
 	font-size: 12px;
 }
 	
+/* ========================================
+   Clean & Minimal Event Card
+   ======================================== */
+
 .card-media {
-	border-radius: 2px;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, .12);
-	height: 125px;
-	margin-bottom: 25px;
-	transition: all 300ms ease-out;
-	width: 100%;
+    display: flex;
+    flex-direction: row;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border: 1px solid #eee;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    margin-bottom: 25px;
 }
-	
+
 .card-media:hover {
-	box-shadow: 0 5px 14px rgba(0, 0, 0, .2);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    transform: translateY(-2px);
 }
-	
+
+/* Image Container */
 .card-media-object-container {
-	background: none;
-	float: left;
-	height: 100%;
-	width: 35%;
-	position: relative;
+    flex: 0 0 50%;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-	
+
 .card-media-object {
-	background-position: center center;
-	background-size: cover;
-	height: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
 }
-	
-.card-media-object:after {
-	content: " ";
-	display: block;
-	height: 100%;
-	left: 0;
-	opacity: 0;
-	position: absolute;
-	right: 0;
-	top: 0;
-	transition: all 300ms ease-out;
-	z-index: 10;
-}
-	
-.card-media:hover .card-media-object:after {
-	background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0) 52%, rgba(0,0,0,0.4) 100%);
-	background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 52%,rgba(0,0,0,0.4) 100%);
-	background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 52%,rgba(0,0,0,0.4) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
-	opacity: 1;
-}
-	
+
+/* Today Badge - Sleek Dark Pill */
 .card-media-object-tag {
-	background-color: #fff;
-	border-radius: 2px;
-	padding: 2px 7px;
-	position: absolute;
-	right: 10px;
-	top: 10px;
+    background-color: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
-	
+
+/* Card Body */
 .card-media-body {
-	background-color: #fff;
-	float: left;
-	height: 100%;
-	padding: 12px 15px;
-	position: relative;
-	width: 65%;
-}
-	
-.card-media-body-top {
-	display: block;
-}
-	
-.card-media-body-top-icons {
-	margin-top: -2px;
-	opacity: 0;
-	transition: all 300ms ease-out;
-	transform: translateY(-5px);
-}
-	
-.card-media:hover .card-media-body-top-icons {
-	opacity: 1;
-	transform: translateY(0);
+    flex: 1;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically relative to itself */
+    gap: 6px;
 }
 
-.card-media-body-top-icons a {
-	text-decoration: none;
-}
-	
-.card-media-body-top-icons svg,
-.card-media-body-top-icons img {
-	padding: 0;
-	margin: 0;
-	cursor: pointer;
-	margin-left: 5px;
-	transition: all 300ms ease-out;
-	vertical-align: unset;
-	width: 16px;
-	height: 16px;
-	color: #828282;
-}
-	
-.card-media-body-top-icons > svg:hover,
-.card-media-body-top-icons > img:hover {
-	fill: #444;
-}
-	
+/* Title Styling */
 .card-media-body-heading {
-	display: block;
-	color: #888;
-	text-decoration: none;
-}
-	
-.card-media-body-supporting-bottom {
-	position: absolute;
-	bottom: 10px;
-	left: 0;
-	opacity: 1;
-	padding: 0 15px;
-	transition: all 300ms ease-out;
-	width: 100%;
-}
-	
-.card-media:hover .card-media-body-supporting-bottom {
-	opacity: 0;
-	transform: translateY(-8px);
-}
-	
-.card-media-body-supporting-bottom-text {
-	display: inline-block;
-}
-	
-.card-media-body-supporting-bottom-text.u-float-right:not(.card-media-link) {
-	margin-top: 4px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #111 !important;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.3;
+    text-decoration: none !important;
+    border: none !important;
+    margin: 0;
 }
 
-.card-media-body-supporting-bottom-reveal {
-	opacity: 0;
-	transform: translateY(8px);
-	transition: all 300ms ease-out;
-}
-	
-.card-media:hover .card-media-body-supporting-bottom-reveal {
-	opacity: 1;
-	transform: translateY(0);
-}
-	
-.card-media-link {
-	color: #41C1F2;
-	text-decoration: none;
+.card-media-body-heading:hover {
+    color: #555 !important;
 }
 
-iframe {
-	max-width: 100%;
+/* Actions Row */
+.card-media-body-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 8px;
 }
 
+/* Minimal RSVP Button */
+.btn-rsvp {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 20px;
+    background-color: #000;
+    color: #fff !important;
+    border: 1px solid #000;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none !important;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease;
+    line-height: normal;
+}
+
+.btn-rsvp:hover {
+    background-color: #333;
+    border-color: #333;
+    transform: translateY(-1px);
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none !important;
+    border: none !important;
+    opacity: 0.5;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.social-icons a:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.svg-icon-circle {
+    width: 18px;
+    height: 18px;
+    fill: #111;
+}
+
+/* Mobile Responsive */
 @media screen and (max-width: 768px) {
-	.site-nav {
-		z-index: 1;
-	}
-	.loader span {
-		font-size: 25px;
-	}
-	.loader .bracket {
-		font-size: 30px;
-	}	
-	.loader .bracket:nth-child(n+2) {
-		font-size: 30px;
-	}
-	.card-media {
-		height: 300px;
-	}
-	.card-media-object-container {
-		width: 100%;
-		height: 150px;
-	}
-	.card-media-body {
-		width: 100%;
-		height: 150px;
-	}
-	.card-media-body-supporting-bottom {
-		text-align: center;
-	}
-	.card-media-body-supporting-bottom-text {
-		display: block;
-	}
-	.card-media-body-supporting-bottom .u-float-right {
-		float: none;
-	}
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 16px;
+        box-sizing: border-box;
+    }
+
+    .card-media {
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        box-sizing: border-box;
+    }
+    
+    .card-media-object-container {
+        width: 100%;
+        min-width: 100%;
+    }
+    
+    .card-media-object {
+        width: 100%;
+        height: auto;
+    }
+    
+    .card-media-body {
+        padding: 20px;
+        gap: 8px;
+        text-align: center;
+    }
+    
+    .card-media-body-heading {
+        font-size: 18px;
+    }
+    
+    .card-title-section {
+        text-align: center;
+    }
+    
+    .event-datetime,
+    .event-location {
+        justify-content: center;
+    }
+    
+    .card-media-body-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
+    
+    .btn-rsvp {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .social-icons {
+        justify-content: center;
+        margin-top: 5px;
+    }
+    
+    /* Smaller loader on mobile */
+    .loader span {
+        font-size: 40px;
+    }
+    
+    .loader .bracket,
+    .loader .bracket:nth-child(n+2) {
+        font-size: 50px;
+    }
 }

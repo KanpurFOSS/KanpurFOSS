@@ -1,0 +1,336 @@
+/* ========================================
+   Global Golden Ratio Design System
+   Ratio (φ): 1.618
+   Base Unit: 16px
+   Scale: 10, 16, 26, 42, 68, 110, 178
+   Colors: #000 (Primary), #555 (Secondary), #f5f5f5 (Bg), #fff (Card)
+   ======================================== */
+
+/* --- Typography --- */
+body {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 16px;
+    line-height: 1.618;
+    color: #000;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif !important;
+    color: #000;
+    margin-top: 42px; /* 26 * 1.618 */
+    margin-bottom: 26px; /* 16 * 1.618 */
+    line-height: 1.3;
+}
+
+h1 { font-size: 42px; font-weight: 700; letter-spacing: -1px; }
+h2 { font-size: 34px; font-weight: 600; letter-spacing: -0.5px; }
+h3 { font-size: 26px; font-weight: 600; }
+h4 { font-size: 21px; font-weight: 500; }
+h5 { font-size: 16px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+
+p {
+    margin-bottom: 26px;
+    color: #555;
+    max-width: 680px; /* Optimal reading width */
+}
+
+/* Links */
+a, a:hover, a:focus, a:active {
+    font-family: 'Poppins', sans-serif !important;
+    color: #000;
+    text-decoration: none !important;
+    border: none !important;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #555;
+}
+
+/* --- Layout Containers --- */
+.wrapper {
+    max-width: 1100px !important; /* Spacious modern container */
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 26px; /* Golden padding */
+    padding-left: 26px;
+}
+
+/* --- Header --- */
+.site-header {
+    border-top: 5px solid #000;
+    border-bottom: 1px solid #f0f0f0;
+    min-height: 68px; /* Golden height */
+    line-height: 68px; /* Vertically center */
+    background: #fff;
+    position: relative; 
+}
+
+.site-title {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: #000 !important;
+    text-decoration: none !important;
+    border: none !important;
+    /* Reset line-height override if needed by theme */
+    line-height: inherit; 
+    float: left;
+}
+
+.site-nav {
+    float: right;
+    line-height: 68px;
+}
+
+.site-nav .page-link {
+    color: #555 !important;
+    font-weight: 500;
+    font-size: 14px;
+    margin-left: 26px;
+    letter-spacing: 0.5px;
+    text-decoration: none !important;
+    border: none !important;
+}
+
+.site-nav .page-link:hover {
+    color: #000 !important;
+}
+
+/* --- Content Areas --- */
+.page-content {
+    padding: 68px 0; /* Generous vertical spacing */
+    background: #fff;
+}
+
+.post-title {
+    margin-top: 0;
+    margin-bottom: 42px;
+}
+
+/* --- Modern Footer --- */
+.site-footer {
+    padding: 50px 0 30px;
+    border-top: 1px solid #eee;
+    background: #fafafa;
+}
+
+.footer-heading {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    margin-top: 0;
+    color: #000;
+}
+
+.footer-col-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    color: #555;
+    font-size: 14px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-col-1 {
+    flex: 1.2;
+}
+
+.footer-col-3 {
+    flex: 1.5;
+}
+
+.contact-list,
+.social-media-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-list li,
+.social-media-list li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-media-list .svg-icon {
+    width: 20px !important;
+    height: 20px !important;
+    fill: #555;
+    flex-shrink: 0;
+    margin-right: 0 !important;
+    padding: 0 !important;
+    vertical-align: middle;
+}
+
+.svg-icon {
+    width: 20px !important;
+    height: 20px !important;
+    vertical-align: text-bottom;
+}
+
+.social-media-list a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #555;
+    text-decoration: none;
+}
+
+.social-media-list a:hover {
+    color: #000;
+}
+
+.social-media-list a:hover .svg-icon {
+    fill: #000;
+}
+
+/* Subtle invite link style for footer */
+.footer-invite-link {
+    display: inline-block;
+    margin-top: 16px;
+    color: #888;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    padding-bottom: 2px;
+    border-bottom: 1px dotted #ccc;
+}
+
+.footer-invite-link:hover {
+    color: #000;
+    border-bottom-style: solid;
+}
+
+/* --- Components Overrides --- */
+
+/* Input Fields (if any) */
+input[type="text"], input[type="email"], textarea {
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    width: 100%;
+    margin-bottom: 16px;
+    font-family: inherit;
+    transition: border 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #000;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 26px;
+    background: #000;
+    color: #fff !important;
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.btn:hover {
+    background: #333;
+    color: #fff !important;
+    opacity: 1;
+    transform: translateY(-1px);
+}
+
+/* Mobile Adjustments */
+@media screen and (max-width: 768px) {
+    .wrapper {
+        padding-right: 16px; 
+        padding-left: 16px;
+    }
+    
+    h1 { font-size: 28px; margin-top: 26px; margin-bottom: 16px; }
+    h2 { font-size: 24px; margin-top: 20px; margin-bottom: 12px; }
+    h3 { font-size: 20px; }
+    
+    p { 
+        font-size: 15px; 
+        margin-bottom: 16px;
+    }
+    
+    .page-content {
+        padding: 40px 0;
+    }
+    
+    .site-header {
+        min-height: 56px;
+        line-height: 56px;
+    }
+    
+    .site-title {
+        font-size: 22px;
+    }
+    
+    .site-nav {
+        background-color: #fff;
+        border: 1px solid #eee;
+        border-radius: 4px;
+        line-height: 56px;
+    }
+    
+    .site-nav .page-link {
+        font-size: 13px;
+        margin-left: 16px;
+    }
+    
+    .site-footer {
+        padding: 30px 0;
+    }
+    
+    .footer-col-wrapper {
+        flex-direction: column;
+        gap: 25px;
+    }
+    
+    .footer-col {
+        min-width: 100%;
+    }
+    
+    .footer-heading {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+    
+    .social-media-list li {
+        margin-bottom: 8px;
+    }
+    
+    .social-media-list .svg-icon {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .wrapper {
+        padding-right: 12px; 
+        padding-left: 12px;
+    }
+    
+    h1 { font-size: 24px; }
+    h2 { font-size: 20px; }
+    
+    .site-title {
+        font-size: 20px;
+    }
+    
+    .btn, .btn-rsvp {
+        width: 100%;
+        text-align: center;
+    }
+}

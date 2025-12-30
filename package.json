@@ -1,0 +1,27 @@
+{
+  "name": "kanpurfoss",
+  "version": "1.0.0",
+  "description": "KanpurFOSS Community Website",
+  "scripts": {
+    "fetch": "node scripts/fetch-meetup-events.js",
+    "build": "bundle exec jekyll build",
+    "serve": "bundle exec jekyll serve --livereload",
+    "dev": "npm run fetch && npm run serve",
+    "start": "npm run dev",
+    "update": "npm run fetch && npm run build",
+    "deploy": "npm run update"
+  },
+  "keywords": [
+    "kanpur",
+    "foss",
+    "meetup",
+    "community",
+    "jekyll"
+  ],
+  "author": "KanpurFOSS",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KanpurFOSS/KanpurFOSS.git"
+  }
+}

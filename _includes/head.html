@@ -2,15 +2,19 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" type="image/png" href="{{ "assets/images/favicon.ico" | relative_url }}"/>
+  <link rel="shortcut icon" type="image/x-icon" href="{{ "assets/images/favicon.ico" | relative_url }}"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   {%- seo -%}
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ "/assets/css/custom.css" | relative_url }}">
   {% if page.layout == "home" or page.layout == "twn" %}
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
   {% endif %}
   {% if page.layout == "home" %}
   <link rel="stylesheet" href="{{ "/assets/css/meetup.css" | relative_url }}">
-  <script src="{{ "/assets/js/meetup-api.js" | relative_url }}"></script>
+  <script src="{{ "/assets/js/meetup-api.js" | relative_url }}?v={{ site.time | date: '%s' }}"></script>
   {% endif %}
   {% if page.layout == "twn" %}
   <link rel="stylesheet" href="{{ "/assets/css/meetup.css" | relative_url }}">
