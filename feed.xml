@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-12-30T07:11:22+00:00</updated><id>/feed.xml</id><title type="html">KanpurFOSS</title><subtitle>Kanpur FOSS is a community of open source enthusiasts. We promote free &amp; open internet, and inclusivity. And you, my friend, are invited to be a part of our awesome community! :)</subtitle><entry><title type="html">Python Programming Language in AI</title><link href="/python/pydata/2018/05/11/python-programming-language-in-ai.html" rel="alternate" type="text/html" title="Python Programming Language in AI" /><published>2018-05-11T12:28:00+00:00</published><updated>2018-05-11T12:28:00+00:00</updated><id>/python/pydata/2018/05/11/python-programming-language-in-ai</id><content type="html" xml:base="/python/pydata/2018/05/11/python-programming-language-in-ai.html"><![CDATA[<p>We all are in the era of <a href="https://en.wikipedia.org/wiki/Artificial_intelligence">Artificial Intelligence</a>. Tech giants like Google, Microsoft &amp; Facebook investing in AI. <strong>Amazon’s Alexa</strong> also shows how stiff competition is going into the market of AI, not only Google &amp; Apple but other companies also dominate the tech market if they have the power of AI. There is a tremendous opportunity in 2018 for people who are looking for jobs in Machine Learning, Deep Learning &amp; AI. Sometimes it seems like Machine Learning &amp; AI both are the same things, but there is a fundamental difference between them. Here’s the best explanation about this:</p>
+
+<blockquote>
+  <p><em>Artificial Intelligence is the broader concept of machines being able to carry out tasks in a way that we would consider “smart”.</em></p>
+</blockquote>
+
+<p>Here I’m going to tell you about how a programming language plays a crucial roll in the production of AI product. If you are looking for an opportunity in AI, you must understand the power of Python.</p>
+
+<h3 id="1-about-python">1. About Python</h3>
+
+<p>Python is a powerful high-level, object-oriented and most popular open source programming language created by <a href="https://en.wikipedia.org/wiki/Guido_van_Rossum">Guido van Rossum</a>.
+It has simple easy-to-use syntax, making it the perfect language for someone trying to learn computer programming for the first time.</p>
+
+<p>Python is a general-purpose language. It has a wide range of applications from Web development (like Django, Flask &amp; Web2py), scientific and mathematical computing (Orange, SymPy, NumPy) to desktop graphical user Interfaces (Pygame, Panda3D).</p>
+
+<p>If you are a beginner, you can quickly start with Python. There are huge Python Learning resources available on the Internet. I suggest few books if you don’t know anything about Python :</p>
+
+<ol>
+  <li><a href="http://www.greenteapress.com/thinkpython/thinkCSpy.pdf">Think Python: How to Think Like a Computer Scientist</a></li>
+  <li><a href="https://kushaldas.in/details/pym.pdf">Python for you and me</a></li>
+</ol>
+
+<h3 id="2-python-library--framework-for-ai">2. Python Library &amp; Framework for AI</h3>
+
+<p>In this section, we will be looking at powerful, popular Python libraries that are used for artificial intelligence. We will be looking at their advantages &amp; drawbacks, and their features. So, Let’s begin and explore these fantastic Python libraries:</p>
+
+<p><strong>1. TensorFlow:</strong></p>
+
+<p><img src="/assets/posts/tensorflow.png" alt="tensorflow" /></p>
+
+<p>TensorFlow is an open-source software library for dataflow programming and widely used for machine learning applications such as neural networks. TensorFlow was developed by the Google Brain team for internal Google use. It was released under the Apache 2.0 open source license on November 9, 2015</p>
+
+<blockquote>
+  <p><em>“Computation using data flow graphs for scalable machine learning.”</em></p>
+</blockquote>
+
+<p>TensorFlow is an interface for expressing Machine Learning algorithm &amp; implementation for executing such algorithm. It helps for creating ensemble algorithms for today’s most challenging problems.</p>
+
+<p><strong>Advantages:</strong></p>
+
+<ol>
+  <li>Flexible Structure</li>
+  <li>Rich Documentation with a great community</li>
+  <li>Predefined implementation available as well as open-source</li>
+</ol>
+
+<p><strong>Drawbacks:</strong></p>
+
+<ol>
+  <li>It requires knowledge of Python</li>
+  <li>Computation is bit slow</li>
+  <li>Overkill for simpler tasks</li>
+</ol>
+
+<p><a href="https://www.tensorflow.org/">Click Here For Documentation</a></p>
+
+<p><strong>2. PyTouch:</strong></p>
+
+<p><img src="/assets/posts/pytorch.png" alt="PyTorch" /></p>
+
+<p>PyTorch is a Python-based open-source Machine Learning library with GPU support. PyTorch is a python package that provides two high-level features:</p>
+
+<ul>
+  <li>Tensor computation (like NumPy) with strong GPU acceleration</li>
+  <li>Deep Neural Networks built on a tape-based auto diff system</li>
+</ul>
+
+<p>PyTorch is a cousin of lua-based Torch framework which is actively used at Facebook. The main feature is that Neural Networks can be built dynamically making way for learning more advanced and complex AI tasks.</p>
+
+<blockquote>
+  <p><em>“Best fits for those who are looking for more Pythonic Environment.”</em></p>
+</blockquote>
+
+<p>PyTorch is fast and lean because it allows you to  integrate acceleration libraries such as Intel MKL and NVIDIA (CuDNN, NCCL) to maximize speed.</p>
+
+<blockquote>
+  <p><em>“PyTorch is quite fast – whether you run small or large neural networks.”</em></p>
+</blockquote>
+
+<p><strong>Advantages:</strong></p>
+
+<ol>
+  <li>Deep learning research platform that provides maximum flexibility</li>
+  <li>Fast &amp; Lean</li>
+  <li>Pretty good documentation</li>
+</ol>
+
+<p><strong>Drawbacks:</strong></p>
+
+<ol>
+  <li>PyTorch only supports Linux and OSX.</li>
+</ol>
+
+<p><a href="http://pytorch.org/">Click Here For Documentation</a></p>
+
+<p><strong>3. Keras:</strong></p>
+
+<p><img src="/assets/posts/keras.png" alt="Keras" /></p>
+
+<p>Keras is an open-source high-level neural networks Library, written in Python. It is running on top of TensorFlow, CNTK, or Theano. Keras is an easy to use neural network library that promotes a clean and straightforward syntax. Keras is layer-oriented. I suggest use <strong>Keras</strong> If you’re using known network design.</p>
+
+<p>Keras code is portable. There is no need to change your code written in Keras, whether you change your backend from Theano to TensorFlow. Keras is more mature then PyTorch with excellent community support.</p>
+
+<p><strong>Advantages:</strong></p>
+
+<ol>
+  <li>Documentation is very clean</li>
+  <li>Keras code is Portable</li>
+  <li>Community support is excellent</li>
+</ol>
+
+<p><strong>Drawbacks:</strong></p>
+
+<ol>
+  <li>Keras is not good when you implement your own layers and doing prototyping and research</li>
+</ol>
+
+<p><a href="https://keras.io/">Click Here For Documentation</a></p>
+
+<p><strong>4. Scikit Learn:</strong></p>
+
+<p><img src="/assets/posts/scikit.png" alt="Keras" /></p>
+
+<p>Scikit-learn is probably the most useful library for machine learning in Python. David Cournapeau initially developed Scikit-learn as a Google summer of code project in 2007. It is on NumPy, SciPy, and matplotlib. This library contains a lot of efficient tools for machine learning and statistical modeling including classification, regression, clustering and dimensionality reduction.</p>
+
+<p>The library is built upon the SciPy (Scientific Python) that must be installed before you can use Scikit-Learn. This stack that includes:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>NumPy: Base n-dimensional array package
+SciPy: Fundamental library for scientific computing
+Matplotlib: Comprehensive 2D/3D plotting
+IPython: Enhanced interactive console
+Sympy: Symbolic mathematics
+Pandas: Data structures and analysis
+</code></pre></div></div>
+
+<p>Scikit-Learn is characterized by a clean, uniform, and streamlined API, as well as by handy and complete online documentation. A benefit of this uniformity is that once you understand the basic use and syntax of Scikit-Learn for one type of model, switching to a new model or algorithm is very straightforward.</p>
+
+<p><strong>Advantages:</strong></p>
+
+<ol>
+  <li>Easy to use</li>
+  <li>supports most practical tasks</li>
+</ol>
+
+<p><strong>Drawbacks:</strong></p>
+
+<ol>
+  <li>Bad for deep learning</li>
+</ol>
+
+<p><a href="scikit-learn.org/">Click Here For Documentation</a></p>
+
+<h3 id="3-popular-implemented-projects-in-python">3. Popular Implemented Projects in Python</h3>
+
+<p>Getting into Machine Learning and AI is not an easy task. Lots of effort put together for implementing some useful task to build an AI model. Open source projects can be useful for data scientists. You can learn by reading the source code and build something on top of the existing projects.</p>
+
+<p>Lots of people start contributing to opensource just because of these awesome opensource projects. Here I will tell you about five most popular opensource projects which are widely used for developing any AI models are as follows :</p>
+
+<p><strong>1. TensorFlow :</strong> 169% up, from 493 to 1453 contributors</p>
+
+<p><a href="https://github.com/tensorflow/tensorflow">Github Link</a></p>
+
+<p><strong>2. Keras:</strong> 656 contributors</p>
+
+<p><a href="https://github.com/keras-team/keras">Github Link</a></p>
+
+<p><strong>3. PyTorch :</strong> 613 contributors</p>
+
+<p><a href="https://github.com/pytorch/pytorch">Github Link</a></p>
+
+<p><strong>4. Scikit Learn:</strong> 1069 contributors</p>
+
+<p><a href="https://github.com/scikit-learn/scikit-learn">Github Link</a></p>
+
+<p><strong>5. Theano:</strong> 330 contributors</p>
+
+<p><a href="https://github.com/Theano/Theano">Github Link</a></p>
+
+<h3 id="4-motivation">4. Motivation</h3>
+
+<p>Machine learning is about teaching computers how to learn from data to make decisions or predictions. For true machine learning, the computer must be able to learn to identify patterns without being explicitly programmed.</p>
+
+<p>You may also hear it labeled several other names or buzzwords:</p>
+
+<blockquote>
+  <p>Data Science, Big Data, Artificial Intelligence, Predictive Analytics, Computational Statistics, Data Mining, etc.</p>
+</blockquote>
+
+<p>The best way to dive into AI is to learn on your own which is know as <strong>The Self-Starter Way</strong>. Self-Starter way is far better than the academic approach where you don’t have to follow lots of guidelines. <strong>Doing Practice</strong> is the only way to learn things.</p>]]></content><author><name>Himanshu Awasthi</name></author><category term="python" /><category term="pydata" /><summary type="html"><![CDATA[We all are in the era of Artificial Intelligence. Tech giants like Google, Microsoft &amp; Facebook investing in AI. Amazon’s Alexa also shows how stiff competition is going into the market of AI, not only Google &amp; Apple but other companies also dominate the tech market if they have the power of AI. There is a tremendous opportunity in 2018 for people who are looking for jobs in Machine Learning, Deep Learning &amp; AI. Sometimes it seems like Machine Learning &amp; AI both are the same things, but there is a fundamental difference between them. Here’s the best explanation about this:]]></summary></entry><entry><title type="html">Introduction to Numpy</title><link href="/python/pydata/2018/04/12/introduction-to-numpy.html" rel="alternate" type="text/html" title="Introduction to Numpy" /><published>2018-04-12T01:00:00+00:00</published><updated>2018-04-12T01:00:00+00:00</updated><id>/python/pydata/2018/04/12/introduction-to-numpy</id><content type="html" xml:base="/python/pydata/2018/04/12/introduction-to-numpy.html"><![CDATA[<p><a href="http://www.numpy.org/">NumPy</a> is a Python tools for scientific computing. It can be used to:</p>
+
+<ul>
+  <li>create N-dimensional array objects.</li>
+  <li>broadcasting of multiple arrays.</li>
+  <li>tools for integrating C/C++ and Fortran code</li>
+  <li>perform linear algebra, Fourier transform, and random number generation.</li>
+</ul>
+
+<h3 id="installing-numpy">Installing Numpy</h3>
+
+<p>The best way to install Numpy is by installing the <a href="https://www.anaconda.com/download">Anaconda</a> distribution for Python as it will install some other packages also, which are commonly used in data analysis. Another way is by installing using <code class="language-plaintext highlighter-rouge">pip install numpy</code> command.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>  <span class="c1">#Importing the numpy module.
+</span></code></pre></div></div>
+
+<h3 id="making-basic-numpy-array">Making basic Numpy array</h3>
+
+<p>Following is the syntax for making a numpy array which is also known as <code class="language-plaintext highlighter-rouge">ndarray</code> (n-dimensional array):</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>numpy.array(object, dtype = None, copy = True, order = None, subok = False, ndmin = 0)
+</code></pre></div></div>
+
+<p>where:</p>
+
+<p><code class="language-plaintext highlighter-rouge">object</code> is the sequence to be converted into list.
+<code class="language-plaintext highlighter-rouge">dtype</code> is the datatype of the elements of array.
+<code class="language-plaintext highlighter-rouge">order</code> can be <code class="language-plaintext highlighter-rouge">C</code> for row major or <code class="language-plaintext highlighter-rouge">F</code> for column major or <code class="language-plaintext highlighter-rouge">A</code> for any (default).
+<code class="language-plaintext highlighter-rouge">ndmin</code> specifies the minimum dimensions of resultant array.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#Making the basic numpy array
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="s">"float"</span><span class="p">,</span> <span class="n">ndmin</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="p">[[[[[</span>  <span class="mf">0.</span>   <span class="mf">1.</span>   <span class="mf">2.</span>   <span class="mf">3.</span>   <span class="mf">4.</span>   <span class="mf">5.</span>   <span class="mf">6.</span>   <span class="mf">7.</span>   <span class="mf">8.</span>   <span class="mf">9.</span>  <span class="mf">10.</span>  <span class="mf">11.</span>  <span class="mf">12.</span>  <span class="mf">13.</span>
+      <span class="mf">14.</span>  <span class="mf">15.</span>  <span class="mf">16.</span>  <span class="mf">17.</span>  <span class="mf">18.</span>  <span class="mf">19.</span><span class="p">]]]]]</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">np.sctypes</code> can be used to see the list of all available datatypes.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">np</span><span class="p">.</span><span class="n">sctypes</span>
+<span class="p">{</span><span class="s">'complex'</span><span class="p">:</span> <span class="p">[</span><span class="n">numpy</span><span class="p">.</span><span class="n">complex64</span><span class="p">,</span> <span class="n">numpy</span><span class="p">.</span><span class="n">complex128</span><span class="p">,</span> <span class="n">numpy</span><span class="p">.</span><span class="n">complex256</span><span class="p">],</span>
+ <span class="s">'float'</span><span class="p">:</span> <span class="p">[</span><span class="n">numpy</span><span class="p">.</span><span class="n">float16</span><span class="p">,</span> <span class="n">numpy</span><span class="p">.</span><span class="n">float32</span><span class="p">,</span> <span class="n">numpy</span><span class="p">.</span><span class="n">float64</span><span class="p">,</span> <span class="n">numpy</span><span class="p">.</span><span class="n">float128</span><span class="p">],</span>
+ <span class="s">'int'</span><span class="p">:</span> <span class="p">[</span><span class="n">numpy</span><span class="p">.</span><span class="n">int8</span><span class="p">,</span> <span class="n">numpy</span><span class="p">.</span><span class="n">int16</span><span class="p">,</span> <span class="n">numpy</span><span class="p">.</span><span class="n">int32</span><span class="p">,</span> <span class="n">numpy</span><span class="p">.</span><span class="n">int64</span><span class="p">],</span>
+ <span class="s">'others'</span><span class="p">:</span> <span class="p">[</span><span class="nb">bool</span><span class="p">,</span> <span class="nb">object</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="n">numpy</span><span class="p">.</span><span class="n">void</span><span class="p">],</span>
+ <span class="s">'uint'</span><span class="p">:</span> <span class="p">[</span><span class="n">numpy</span><span class="p">.</span><span class="n">uint8</span><span class="p">,</span> <span class="n">numpy</span><span class="p">.</span><span class="n">uint16</span><span class="p">,</span> <span class="n">numpy</span><span class="p">.</span><span class="n">uint32</span><span class="p">,</span> <span class="n">numpy</span><span class="p">.</span><span class="n">uint64</span><span class="p">]}</span>
+</code></pre></div></div>
+
+<h3 id="numpy-array-attributes">Numpy array attributes</h3>
+
+<p>Since the numpy array is <code class="language-plaintext highlighter-rouge">ndarray</code> object, it has many attributes which can be used to determine the properties of the array.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">]],</span> <span class="n">dtype</span><span class="o">=</span><span class="s">'int64'</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="p">.</span><span class="n">ndim</span>  <span class="c1">#The dimension of the array 
+</span><span class="mi">2</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="p">.</span><span class="n">itemsize</span>  <span class="c1">#size of each element in bytes
+</span><span class="mi">8</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="p">.</span><span class="n">dtype</span>  <span class="c1"># datatype of array elements
+</span><span class="n">dtype</span><span class="p">(</span><span class="s">'int64'</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="p">.</span><span class="n">size</span>  <span class="c1">#number of elements in array
+</span><span class="mi">12</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="p">.</span><span class="n">shape</span>
+<span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="different-ways-of-making-an-array">Different ways of making an array</h3>
+
+<p>Numpy array with all zero values:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span><span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+<span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+       <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+       <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]])</span>
+</code></pre></div></div>
+
+<p>Numpy array with all one values:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span><span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+<span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+       <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+</code></pre></div></div>
+
+<p>Numpy array in a range:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">])</span>
+</code></pre></div></div>
+
+<p>Numpy array with elements equally distributed over a given range:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 9 elements equally distributed between 1 and 5
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">9</span><span class="p">)</span>
+<span class="n">array</span><span class="p">([</span> <span class="mf">1.</span> <span class="p">,</span>  <span class="mf">1.5</span><span class="p">,</span>  <span class="mf">2.</span> <span class="p">,</span>  <span class="mf">2.5</span><span class="p">,</span>  <span class="mf">3.</span> <span class="p">,</span>  <span class="mf">3.5</span><span class="p">,</span>  <span class="mf">4.</span> <span class="p">,</span>  <span class="mf">4.5</span><span class="p">,</span>  <span class="mf">5.</span> <span class="p">])</span>
+</code></pre></div></div>
+
+<p>Numpy array with uninitailized (random) values:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">e</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">empty</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+<span class="n">array</span><span class="p">([[</span>              <span class="mi">0</span><span class="p">,</span>        <span class="mi">36146672</span><span class="p">],</span>
+       <span class="p">[</span><span class="mi">139882926576392</span><span class="p">,</span> <span class="mi">139882937434400</span><span class="p">]])</span>
+</code></pre></div></div>
+
+<h3 id="operations-on-array">Operations on array</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">12</span><span class="p">,</span><span class="mi">53</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">75</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">10</span><span class="p">],[</span><span class="mi">9</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">47</span><span class="p">,</span><span class="mi">92</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">71</span><span class="p">]],</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+<span class="n">array</span><span class="p">([[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">75</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mi">4</span><span class="p">,</span>  <span class="mi">6</span><span class="p">,</span>  <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mi">9</span><span class="p">,</span>  <span class="mi">7</span><span class="p">,</span>  <span class="mi">5</span><span class="p">,</span>  <span class="mi">3</span><span class="p">],</span>
+       <span class="p">[</span><span class="mi">47</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">71</span><span class="p">]])</span>
+</code></pre></div></div>
+
+<p>Changing the dimensions of the array:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">array</span><span class="p">([[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">53</span><span class="p">],</span>
+       <span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">75</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mi">4</span><span class="p">,</span>  <span class="mi">6</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mi">9</span><span class="p">,</span>  <span class="mi">7</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mi">5</span><span class="p">,</span>  <span class="mi">3</span><span class="p">],</span>
+       <span class="p">[</span><span class="mi">47</span><span class="p">,</span> <span class="mi">92</span><span class="p">],</span>
+       <span class="p">[</span><span class="mi">13</span><span class="p">,</span> <span class="mi">71</span><span class="p">]])</span>
+</code></pre></div></div>
+
+<p>Convert array into 1D:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">.</span><span class="n">ravel</span><span class="p">()</span>
+<span class="n">array</span><span class="p">([</span><span class="mi">12</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span>  <span class="mi">4</span><span class="p">,</span>  <span class="mi">6</span><span class="p">,</span>  <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span>  <span class="mi">9</span><span class="p">,</span>  <span class="mi">7</span><span class="p">,</span>  <span class="mi">5</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span> <span class="mi">47</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">71</span><span class="p">])</span>
+</code></pre></div></div>
+
+<p>Array of unique elements:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">np</span><span class="p">.</span><span class="n">unique</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="n">array</span><span class="p">([</span> <span class="mi">3</span><span class="p">,</span>  <span class="mi">4</span><span class="p">,</span>  <span class="mi">5</span><span class="p">,</span>  <span class="mi">6</span><span class="p">,</span>  <span class="mi">7</span><span class="p">,</span>  <span class="mi">8</span><span class="p">,</span>  <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">47</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="mi">92</span><span class="p">])</span>
+</code></pre></div></div>
+
+<p>Minimum and maximum value of the array:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="nb">min</span><span class="p">(),</span><span class="n">a</span><span class="p">.</span><span class="nb">max</span><span class="p">())</span>
+<span class="mi">3</span> <span class="mi">92</span>
+</code></pre></div></div>
+
+<p>Sum of all elements, takes optional argument <code class="language-plaintext highlighter-rouge">axis</code> 1 for row wise addition 0 for column wise addition:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">.</span><span class="nb">sum</span><span class="p">()</span>
+<span class="mi">440</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">array</span><span class="p">([</span><span class="mi">165</span><span class="p">,</span>  <span class="mi">28</span><span class="p">,</span>  <span class="mi">24</span><span class="p">,</span> <span class="mi">223</span><span class="p">])</span>
+</code></pre></div></div>
+
+<p>To find the Standard Deviation:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">np</span><span class="p">.</span><span class="n">std</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="mf">28.902854530305479</span>
+</code></pre></div></div>
+
+<p>To find the square root of elements:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">np</span><span class="p">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="n">array</span><span class="p">([[</span> <span class="mf">3.46410162</span><span class="p">,</span>  <span class="mf">7.28010989</span><span class="p">,</span>  <span class="mf">5.</span>        <span class="p">,</span>  <span class="mf">8.66025404</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mf">2.</span>        <span class="p">,</span>  <span class="mf">2.44948974</span><span class="p">,</span>  <span class="mf">2.82842712</span><span class="p">,</span>  <span class="mf">3.16227766</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mf">3.</span>        <span class="p">,</span>  <span class="mf">2.64575131</span><span class="p">,</span>  <span class="mf">2.23606798</span><span class="p">,</span>  <span class="mf">1.73205081</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mf">6.8556546</span> <span class="p">,</span>  <span class="mf">9.59166305</span><span class="p">,</span>  <span class="mf">3.60555128</span><span class="p">,</span>  <span class="mf">8.42614977</span><span class="p">]])</span>
+</code></pre></div></div>
+
+<h3 id="operations-on-2-numpy-arrays">Operations on 2 numpy arrays.</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">13</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
+<span class="n">array</span><span class="p">([[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span>  <span class="mi">4</span><span class="p">],</span>
+       <span class="p">[</span><span class="mi">17</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span>  <span class="mi">7</span><span class="p">]])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span>
+<span class="n">array</span><span class="p">([[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span>  <span class="mi">3</span><span class="p">],</span>
+       <span class="p">[</span><span class="mi">52</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span>  <span class="mi">6</span><span class="p">]])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">/</span><span class="n">b</span>
+<span class="n">array</span><span class="p">([[</span> <span class="mf">0.1</span>       <span class="p">,</span>  <span class="mf">0.18181818</span><span class="p">,</span>  <span class="mf">3.</span>        <span class="p">],</span>
+       <span class="p">[</span> <span class="mf">0.30769231</span><span class="p">,</span>  <span class="mf">0.35714286</span><span class="p">,</span>  <span class="mf">6.</span>        <span class="p">]])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">-</span><span class="n">b</span>
+<span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mi">9</span><span class="p">,</span> <span class="o">-</span><span class="mi">9</span><span class="p">,</span>  <span class="mi">2</span><span class="p">],</span>
+       <span class="p">[</span><span class="o">-</span><span class="mi">9</span><span class="p">,</span> <span class="o">-</span><span class="mi">9</span><span class="p">,</span>  <span class="mi">5</span><span class="p">]])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">],[</span><span class="mi">13</span><span class="p">,</span><span class="mi">14</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">.</span><span class="n">dot</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="n">array</span><span class="p">([[</span> <span class="mi">39</span><span class="p">,</span>  <span class="mi">45</span><span class="p">],</span>
+       <span class="p">[</span><span class="mi">111</span><span class="p">,</span> <span class="mi">126</span><span class="p">]])</span>
+</code></pre></div></div>
+
+<h3 id="indexing-and-slicing-of-an-array">Indexing and Slicing of an array.</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">12</span><span class="p">,</span><span class="mi">53</span><span class="p">],[</span><span class="mi">8</span><span class="p">,</span><span class="mi">10</span><span class="p">]],</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">4</span><span class="p">).</span><span class="n">reshape</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[:,:]</span>
+<span class="n">array</span><span class="p">([[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">53</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">]])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">array</span><span class="p">([[</span><span class="mi">12</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mi">8</span><span class="p">]])</span>
+<span class="c1">#vertically stack 2 arrays
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">np</span><span class="p">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">))</span>
+<span class="n">array</span><span class="p">([[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">53</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mi">0</span><span class="p">,</span>  <span class="mi">1</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mi">2</span><span class="p">,</span>  <span class="mi">3</span><span class="p">]])</span>
+<span class="c1">#horizontally stack 2 arrays
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">np</span><span class="p">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">))</span>
+<span class="n">array</span><span class="p">([[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span>  <span class="mi">0</span><span class="p">,</span>  <span class="mi">1</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span>  <span class="mi">3</span><span class="p">]])</span>
+<span class="c1">#vertically split array into equal parts
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">np</span><span class="p">.</span><span class="n">vsplit</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="p">[</span><span class="n">array</span><span class="p">([[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">53</span><span class="p">],</span>
+        <span class="p">[</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">]])]</span>
+<span class="c1">#horzonatally split array into equal parts
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">np</span><span class="p">.</span><span class="n">hsplit</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="p">[</span><span class="n">array</span><span class="p">([[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">53</span><span class="p">],</span>
+        <span class="p">[</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">]])]</span>
+<span class="c1">#concat 2 arrays
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">np</span><span class="p">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">))</span>
+<span class="n">array</span><span class="p">([[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">53</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mi">0</span><span class="p">,</span>  <span class="mi">1</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mi">2</span><span class="p">,</span>  <span class="mi">3</span><span class="p">]])</span>
+</code></pre></div></div>
+
+<h3 id="data-filtering">Data Filtering</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">12</span><span class="p">,</span><span class="mi">53</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">75</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">10</span><span class="p">],[</span><span class="mi">9</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">47</span><span class="p">,</span><span class="mi">92</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">71</span><span class="p">]],</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+<span class="c1">#find all elements in a with value greater than equal to 10
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="o">&gt;=</span><span class="mi">10</span>
+<span class="n">array</span><span class="p">([[</span> <span class="bp">True</span><span class="p">,</span>  <span class="bp">True</span><span class="p">,</span>  <span class="bp">True</span><span class="p">,</span>  <span class="bp">True</span><span class="p">],</span>
+       <span class="p">[</span><span class="bp">False</span><span class="p">,</span> <span class="bp">False</span><span class="p">,</span> <span class="bp">False</span><span class="p">,</span>  <span class="bp">True</span><span class="p">],</span>
+       <span class="p">[</span><span class="bp">False</span><span class="p">,</span> <span class="bp">False</span><span class="p">,</span> <span class="bp">False</span><span class="p">,</span> <span class="bp">False</span><span class="p">],</span>
+       <span class="p">[</span> <span class="bp">True</span><span class="p">,</span>  <span class="bp">True</span><span class="p">,</span>  <span class="bp">True</span><span class="p">,</span>  <span class="bp">True</span><span class="p">]],</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">)</span>
+<span class="c1">#elements in b having True value will be assigned value -1 in a (elements in a with value greater than equal to 10)
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="n">b</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
+<span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mi">4</span><span class="p">,</span>  <span class="mi">6</span><span class="p">,</span>  <span class="mi">8</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mi">9</span><span class="p">,</span>  <span class="mi">7</span><span class="p">,</span>  <span class="mi">5</span><span class="p">,</span>  <span class="mi">3</span><span class="p">],</span>
+       <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
+</code></pre></div></div>
+
+<h3 id="plotting-the-frquency-bar-graph-of-numpy-array-data">Plotting the frquency bar graph of numpy array data.</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#using the matplotlib module for plotting
+</span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">12</span><span class="p">,</span><span class="mi">53</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">75</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">10</span><span class="p">],[</span><span class="mi">9</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">47</span><span class="p">,</span><span class="mi">92</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">71</span><span class="p">]],</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+<span class="c1">#using the histogram function
+</span><span class="n">plt</span><span class="p">.</span><span class="n">hist</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">bins</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span><span class="mi">80</span><span class="p">,</span><span class="mi">100</span><span class="p">])</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p><img src="/assets/posts/bargraph.png" alt="Bar Graph" /></p>]]></content><author><name>Tushar Mittal</name></author><category term="python" /><category term="pydata" /><summary type="html"><![CDATA[NumPy is a Python tools for scientific computing. It can be used to:]]></summary></entry></feed>

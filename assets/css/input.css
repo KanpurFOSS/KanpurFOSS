@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased text-gray-900 override_font;
+  }
+}
+
+/* Custom Utilities if needed */
+.override_font {
+    font-family: 'Inter', sans-serif;
+}
