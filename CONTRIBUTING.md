@@ -10,7 +10,7 @@ We love your input! We want to make contributing to this project as easy and tra
 
 ## Setting up the Environment
 
-This Jekyll site uses Node.js for fetching Meetup events and Ruby for building the site.
+This Jekyll site uses Node.js for fetching Meetup events, Tailwind CSS for styling, and Ruby for building the site.
 
 ### Prerequisites
 
@@ -33,23 +33,27 @@ This Jekyll site uses Node.js for fetching Meetup events and Ruby for building t
     bundle install
     ```
 
-3. Fetch latest Meetup events and start development server:
+3. Install Node dependencies:
+    ```bash
+    npm install
+    ```
+
+4. Fetch latest Meetup events and start development server:
     ```bash
     npm run dev
     ```
-    This will fetch events from Meetup and start the Jekyll server with live reload.
+    This will compile Tailwind CSS, fetch events from Meetup, and start the Jekyll server with live reload.
 
-4. Open your browser and navigate to `http://localhost:4000`
+5. Open your browser and navigate to `http://localhost:4000`
 
 ### Available NPM Scripts
 
 | Command | Description |
 |---------|-------------|
 | `npm run fetch` | Fetch latest events from Meetup |
-| `npm run serve` | Start Jekyll development server |
-| `npm run dev` | Fetch events + start server (recommended) |
-| `npm run build` | Build Jekyll for production |
-| `npm run update` | Fetch + build (for deployment) |
+| `npm run build:css` | Build Tailwind CSS for production |
+| `npm run dev` | Fetch events + build CSS + start server (recommended) |
+| `npm run build` | Build Jekyll site for production |
 
 ## Branch Structure
 
@@ -77,17 +81,19 @@ KanpurFOSS/
 ├── _layouts/            # HTML templates
 ├── _includes/           # Reusable partials (header, footer)
 ├── assets/
-│   ├── css/             # Stylesheets
-│   │   ├── custom.css   # Main custom styles
-│   │   └── meetup.css   # Meetup card styles
+│   ├── css/    
+│   │   ├── main.css     # Tailwind input file
+│   │   └── custom.css   # Compiled output
 │   ├── js/
-│   │   └── meetup-api.js # Frontend event display
+│   │   ├── main.js      # Global scripts (Marquee, etc.)
+│   │   └── meetup-api.js # API & UI logic for events/groups
 │   ├── data/
 │   │   └── meetup-events.json # Cached events (auto-updated)
 │   └── images/          # Icons and images
 ├── scripts/
 │   └── fetch-meetup-events.js # Node.js script to fetch events
-├── package.json         # NPM scripts
+├── package.json         # NPM scripts & dependencies
+├── tailwind.config.js   # Tailwind configuration
 └── .github/workflows/   # GitHub Actions for auto-updates
 ```
 
@@ -100,8 +106,8 @@ KanpurFOSS/
     ```javascript
     { urlname: "Your-Group-URL-Name", icon: "your-icon-name", name: "Display Name" }
     ```
-3. Also add the same entry in `assets/js/meetup-api.js` (for fallback display)
-4. Add the corresponding icon PNG to `assets/images/`
+3. Also add the same entry in `assets/js/meetup-api.js` (for frontend rendering)
+4. Add the corresponding icon PNG (transparent background) to `assets/images/`
 5. Run `npm run fetch` to test
 
 ### 2. Writing a Blog Post
@@ -120,15 +126,24 @@ KanpurFOSS/
 
 ### 3. Updating Styles
 
-- Global styles: `assets/css/custom.css`
-- Meetup cards: `assets/css/meetup.css`
-- Follow the Golden Ratio design system (base: 16px, scale: 1.618)
+- This project uses **Tailwind CSS**.
+- Modify styles directly in HTML classes or in `assets/css/main.css` / `tailwind.config.js` for custom configurations.
+- Do **not** edit `assets/css/custom.css` directly as it is auto-generated.
 
-### 4. Submitting Changes
+### 4. Updating Marquee Speed
+
+- Marquee speed is controlled via `_config.yml`:
+    ```yaml
+    marquee:
+      speed_black: 20  # Lower = Faster
+      speed_white: 25
+    ```
+
+### 5. Submitting Changes
 
 1. Fork the repo and create your branch from `development`
 2. Make your changes and test locally
-3. Ensure your code builds without errors: `npm run build`
+3. Ensure your code builds without errors
 4. Issue a Pull Request to `development`
 5. After review, it will be merged to `master` for deployment
 
