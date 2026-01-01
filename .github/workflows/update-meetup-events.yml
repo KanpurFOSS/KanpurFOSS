@@ -1,9 +1,8 @@
 name: Update Meetup Events
 
 on:
-  schedule:
-    # Runs every day at 6 AM IST (12:30 AM UTC)
-    - cron: '30 0 * * *'
+  repository_dispatch:
+    types: [update_events]
   push:
     branches:
       - master
