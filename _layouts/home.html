@@ -14,18 +14,18 @@ layout: compress
     <main class="flex-grow" aria-label="Content">
 
       <!-- ==================== HERO: UPCOMING MEETUPS ==================== -->
-      <section class="py-12 md:py-16">
+      <section class="py-12 md:py-16 bg-black">
         <div class="max-w-5xl mx-auto px-4">
           
           <!-- Section Title -->
-          <h1 class="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold text-center text-white mb-12">
             Upcoming Meetups
           </h1>
 
           <!-- Events Container -->
           <div id="events-container">
             <!-- Loader -->
-            <div class="loader text-center py-16 text-gray-400">
+            <div class="loader text-center py-16 text-white">
               <div class="inline-flex items-center gap-2">
                 <span class="text-lg">{</span>
                 <span class="text-sm">Loading</span>
@@ -38,9 +38,9 @@ layout: compress
       </section>
 
       <!-- ==================== MARQUEE SECTION ==================== -->
-      <section class="marquee-section border-y border-gray-200 overflow-hidden">
-        <div id="marquee-black" class="marquee-container reverse w-full overflow-hidden bg-black text-white py-5" data-speed="{{ site.marquee.speed_black | default: 20 }}"></div>
-        <div id="marquee-white" class="marquee-container w-full overflow-hidden bg-white text-black py-5 border-t border-gray-100" data-speed="{{ site.marquee.speed_white | default: 25 }}"></div>
+      <section class="marquee-section border-y border-gray-800 overflow-hidden">
+        <div id="marquee-black" class="marquee-container reverse w-full overflow-hidden bg-white text-black py-5" data-speed="{{ site.marquee.speed_black | default: 20 }}"></div>
+        <div id="marquee-white" class="marquee-container w-full overflow-hidden bg-black text-white py-5 border-t border-gray-800" data-speed="{{ site.marquee.speed_white | default: 25 }}"></div>
       </section>
 
       <!-- ==================== OUR COMMUNITIES ==================== -->
