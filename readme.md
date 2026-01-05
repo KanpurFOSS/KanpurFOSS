@@ -4,8 +4,6 @@
 
 Kanpur FOSS is a community of open source enthusiasts. We promote free & open internet, and inclusivity. And you, my friend, are invited to be a part of our awesome community! :)
 
-[![Update Meetup Events](https://github.com/KanpurFOSS/KanpurFOSS/actions/workflows/update-meetup-events.yml/badge.svg)](https://github.com/KanpurFOSS/KanpurFOSS/actions/workflows/update-meetup-events.yml)
-
 ## 🌐 Website
 
 Visit us at [kanpurfoss.github.io](https://kanpurfoss.github.io/)
