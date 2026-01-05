@@ -14,19 +14,19 @@ layout: compress
     <main class="flex-grow" aria-label="Content">
 
       <!-- ==================== HERO: UPCOMING MEETUPS ==================== -->
-      <section class="py-12 md:py-16 bg-black">
-        <div class="max-w-5xl mx-auto px-4">
+      <section class="py-gr-3 md:py-gr-4 bg-black">
+        <div class="max-w-5xl mx-auto px-gr-2">
           
           <!-- Section Title -->
-          <h1 class="text-4xl md:text-5xl font-bold text-center text-white mb-12">
+          <h1 class="text-gr-xl md:text-gr-2xl font-bold text-center text-white mb-gr-3 leading-tight">
             Upcoming Meetups
           </h1>
 
           <!-- Events Container -->
           <div id="events-container">
             <!-- Loader -->
-            <div class="loader text-center py-16 text-white">
-              <div class="inline-flex items-center gap-2">
+            <div class="loader text-center py-gr-3 text-white">
+              <div class="inline-flex items-center gap-gr-half">
                 <span class="text-lg">{</span>
                 <span class="text-sm">Loading</span>
                 <span class="text-lg">}</span>
@@ -39,24 +39,24 @@ layout: compress
 
       <!-- ==================== MARQUEE SECTION ==================== -->
       <section class="marquee-section border-y border-gray-800 overflow-hidden">
-        <div id="marquee-black" class="marquee-container reverse w-full overflow-hidden bg-white text-black py-5" data-speed="{{ site.marquee.speed_black | default: 20 }}"></div>
-        <div id="marquee-white" class="marquee-container w-full overflow-hidden bg-black text-white py-5 border-t border-gray-800" data-speed="{{ site.marquee.speed_white | default: 25 }}"></div>
+        <div id="marquee-black" class="marquee-container reverse w-full overflow-hidden bg-white text-black py-gr-1" data-speed="{{ site.marquee.speed_black | default: 20 }}"></div>
+        <div id="marquee-white" class="marquee-container w-full overflow-hidden bg-black text-white py-gr-1 border-t border-gray-800" data-speed="{{ site.marquee.speed_white | default: 25 }}"></div>
       </section>
 
       <!-- ==================== OUR COMMUNITIES ==================== -->
-      <section class="py-16 md:py-20 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-4">
+      <section class="py-gr-4 md:py-gr-5 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-gr-2">
           
           <!-- Section Title -->
-          <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4">
+          <h2 class="text-gr-lg md:text-gr-xl font-bold text-center text-gray-900 mb-gr-1">
             Our Communities
           </h2>
-          <p class="text-center text-gray-500 mb-12 max-w-2xl mx-auto">
+          <p class="text-center text-gray-500 mb-gr-3 max-w-2xl mx-auto text-base">
             Join our various tech communities in Kanpur
           </p>
 
           <!-- Groups Container (Single column for horizontal cards) -->
-          <div id="groups-container" class="flex flex-col gap-6 max-w-5xl mx-auto">
+          <div id="groups-container" class="flex flex-col gap-gr-2 max-w-5xl mx-auto">
             <!-- Groups will be loaded here by JS -->
           </div>
 

@@ -1,34 +1,30 @@
-<footer class="site-footer border-t border-gray-800 py-10 mt-auto bg-black">
+<footer class="site-footer border-t border-gray-800 py-gr-3 mt-auto bg-black">
   <data class="u-url" href="{{ "/" | relative_url }}"></data>
 
-  <div class="max-w-5xl mx-auto px-4">
+  <div class="max-w-5xl mx-auto px-gr-2">
 
-    <h2 class="footer-heading text-lg font-bold mb-6 text-white">{{ site.title | escape }}</h2>
+    <h2 class="footer-heading text-lg font-bold mb-gr-2 text-white">{{ site.title | escape }}</h2>
 
-    <div class="footer-col-wrapper grid grid-cols-1 md:grid-cols-3 gap-8 text-sm text-gray-400">
+    <div class="footer-col-wrapper grid grid-cols-1 md:grid-cols-3 gap-gr-3 text-sm text-gray-400">
       
       <!-- Contact Column -->
       <div class="footer-col">
-        <ul class="contact-list flex flex-col gap-2">
-          <li class="p-name font-medium text-white">
-            {%- if site.author -%}
-              {{ site.author | escape }}
-            {%- else -%}
-              {{ site.title | escape }}
-            {%- endif -%}
+        <ul class="contact-list flex flex-col gap-gr-half">
+          <li>
+            <a class="hover:text-white transition-colors" href="{{ "/code-of-conduct/" | relative_url }}">Code of Conduct</a>
           </li>
           {%- if site.email -%}
           <li><a class="u-email hover:text-white transition-colors" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
           {%- endif -%}
           <li>
-            <a class="hover:text-white transition-colors" href="mailto:kanpurfoss@gmail.com?subject=Invite+for+free+workshop">Invite for Free Workshop</a>
+            <a class="hover:text-white transition-colors" href="https://join.slack.com/t/wpkanpur/shared_invite/zt-3mqkin729-LvSXyZ787rOPNTt9dKWePw">Invite for Free Workshop</a>
           </li>
         </ul>
       </div>
 
       <!-- Social Column -->
       <div class="footer-col">
-        <ul class="flex flex-col gap-2">
+        <ul class="flex flex-col gap-gr-half">
           {%- if site.github_username -%}
           <li>
             <a href="https://github.com/{{ site.github_username | cgi_escape | escape }}" class="flex items-center gap-2 hover:text-white transition-colors">

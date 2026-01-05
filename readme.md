@@ -37,7 +37,7 @@ Open `http://localhost:4000` in your browser.
 
 ## 🤝 Join the Community
 
-- **Slack**: [Join our Slack](http://wpkanpur.slack.com/)
+- **Slack**: [Join our Slack](https://join.slack.com/t/wpkanpur/shared_invite/zt-3mqkin729-LvSXyZ787rOPNTt9dKWePw)
 - **Email**: [kanpurfoss@gmail.com](mailto:kanpurfoss@gmail.com)
 
 ## 📝 Contributing

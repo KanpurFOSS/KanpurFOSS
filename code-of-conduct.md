@@ -2,7 +2,7 @@
 layout: page
 title: Code of Conduct
 permalink: /code-of-conduct/
-menu: main
+menu: footer
 ---
 
 * Meetups are for the benefit of the community as a whole, not specific businesses or individuals. All actions taken as an event organizer are with the best interest of the community in mind.
